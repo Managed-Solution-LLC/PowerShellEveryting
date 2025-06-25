@@ -1,50 +1,45 @@
-# PowerShell Module Template
+# Managed Solution PowerShell Everything
 
-This repository provides a standardized template for building robust, maintainable PowerShell modules.
+This repository contains a collection of PowerShell scripts and helpers for managing Microsoft 365, Azure AD, Intune, and related cloud environments. It is designed to provide practical automation, reporting, and migration tools for IT professionals.
 
 ## Features
-- Standardized folder structure for source, tests, resources, and documentation
-- Example templates for classes, enums, public/private functions, and integration tests
-- Automated build and versioning scripts (see `build/build.ps1`)
-- Documentation and testing helpers
+- Scripts for exporting and managing cloud-only users, groups, and distribution groups
+- AzCopy automation for archiving files to Azure Blob Storage
+- BitLocker recovery key backup from Microsoft Graph
+- Modular folder structure for easy navigation
+- Example templates and documentation for extending functionality
 
 ## Folder Structure
 ```
-module-template/
-├── build/                # Build scripts and helpers (keep `build.ps1` for automation)
-├── docs/                 # Documentation (markdown)
-├── resources/            # Data and templates for your module
-├── src/                  # Source code (classes, enums, functions)
-├── tests/                # Unit and integration tests (keep all unit tests for quality)
-├── Module.psd1           # Module manifest
-├── Module.psm1           # Main module file
-├── README.md             # This file
-└── LICENSE               # License file
+scripts/
+├── Azure/           # Azure and Microsoft 365 automation scripts
+├── Defender/        # Microsoft Defender scripts
+├── Graph Commands/  # Microsoft Graph API scripts
+├── Intune/          # Intune management scripts
+│   └── Assessment/  # Intune assessment scripts
+├── Office365/       # Office 365 scripts
+build/               # Build and helper scripts
 ```
 
 ## Getting Started
-1. **Clone this repository** and rename the root folder to your module name.
-2. **Update `Module.psd1`** with your module's metadata and exported functions.
-3. **Add your code** to the `src/` directory, using the provided templates as a starting point.
-4. **Write tests** in the `tests/` directory (keep and expand unit tests for reliability).
-5. **Document your functions** in the `docs/` folder using markdown.
-6. **Use the build scripts** in the `build/` folder to automate versioning and validation.
+1. **Clone this repository** to your local machine.
+2. **Review the scripts** in the `scripts/` directory. Each script includes documentation and parameter help.
+3. **Install required PowerShell modules** as noted in each script (e.g., Microsoft.Graph, ExchangeOnlineManagement).
+4. **Run scripts** in PowerShell 7+ or Windows PowerShell 5.1, as appropriate.
+5. **Customize and extend** scripts as needed for your environment.
 
-## Templates Included
-- `src/classes/class-template.ps1` – PowerShell class template
-- `src/enum/enum-template.ps1` – Enum template
-- `src/public/public-function-template.ps1` – Public function template
-- `src/private/private-function-template.ps1` – Private function template
-- `resources/templates/temp-template.ps1` – Script template resource
-- `tests/integration/temp-integration-test.ps1` – Integration test template
+## Example Scripts
+- `scripts/Azure/Get-CloudOnlyUsers.ps1` – Export all cloud-only users, groups, and distribution groups
+- `scripts/Azure/AzCopyCommand.ps1` – Archive files to Azure Blob Storage using AzCopy
+- `scripts/Azure/Backup-MgGraphBitLockerKeys.ps1` – Backup BitLocker recovery keys from Microsoft Graph
 
 ## Build and Testing
-- The build process is managed by `build/build.ps1`. Always keep this file to automate versioning, fingerprinting, and validation.
-- Unit tests in `tests/unit/` are essential for maintaining code quality. Keep and expand these tests as your module grows.
+- The `build/` folder contains helper scripts for automation and validation.
+- Scripts are validated for public release and include comment-based help for usage.
 
 ## License
-This template is provided under the GNU General Public License v3.0. See [LICENSE](LICENSE) for details.
+This repository is provided under the GNU General Public License v3.0. See [LICENSE](LICENSE) for details.
 
 ---
 
-> **Tip:** Use this template as a starting point for all new PowerShell modules to ensure consistency, maintainability, and best practices.
+> **Tip:** Use and adapt these scripts to accelerate your Microsoft 365 and Azure automation projects. Contributions and improvements are welcome!
