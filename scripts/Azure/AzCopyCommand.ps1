@@ -33,13 +33,16 @@
 .NOTES
     Author: William Ford
     Date: 2025-06-25
-    Version: 1.0
+    Version: 1.2
     Required Modules: AzCopy
     Output: Files are copied to Azure Blob Storage in the specified folder and tier.
+    History:
+        - 2025-06-25: Initial version with basic functionality.
+        - 2025-06-27: Added error handling for AzCopy download and extraction, and improved folder handling.
 #>
 # =============================
 # VALIDATED FOR PUBLIC RELEASE
-# Date: 2025-06-25
+# Date: 2025-06-27
 # =============================
 [CmdletBinding()]
 param(
@@ -111,13 +114,23 @@ if (-not (Test-Path -Path "$azCopyPath")) {
 #endregion
 
 #Build Folder
-$folder = $rootFolder + $folder
+if ($folder -eq "" -and $rootFolder -eq "/") {
+    Write-Host "Uploading to root folder, no subfolder specified."
+} else {
+    $folder = $rootFolder + $folder
+    # Ensure the folder begins with a slash
+    if ($folder -notlike "/*") {
+        $folder = "/" + $folder
+    }
+}
 # Check if the tier is valid
 $tier = $tier.ToLower()
 if ($tier -notin @("hot","cool", "cold", "archive")) {
     Write-Host "Invalid tier specified. Valid options are: Hot, Cool, Cold, Archive."
     exit 1
 }
+
+# Rebuild the Blob Storage URL with SAS token if folder is specified
 if ($folder -ne "") {
     # Split after the archiveblob part
     $blobSasTokenParts = $blobSasToken -split '\?'
