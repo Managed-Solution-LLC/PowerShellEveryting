@@ -65,11 +65,42 @@ param(
 # Check if working directory has azcopy.exe, if not download it
 if (-not (Test-Path -Path "$azCopyPath")) {
     Write-Host "Downloading AzCopy..."
-    (Invoke-WebRequest -Uri https://aka.ms/downloadazcopy-v10-windows -MaximumRedirection 0 -ErrorAction SilentlyContinue).headers.location | Out-File -FilePath "azcopy.zip" -Encoding ASCII
-    Expand-archive -Path '.\azcopyv10.zip' -Destinationpath '.\'
-    Remove-Item -Path '.\azcopyv10.zip' -Force
-    $azCopyPath = (Get-ChildItem -path '.\' -Recurse -File -Filter 'azcopy.exe').FullName
-    exit 1
+    try {
+        # Get the actual download URL
+        $downloadUrl = (Invoke-WebRequest -Uri https://aka.ms/downloadazcopy-v10-windows -MaximumRedirection 0 -ErrorAction SilentlyContinue).headers.location
+        
+        if (-not $downloadUrl) {
+            Write-Error "Failed to get AzCopy download URL"
+            exit 1
+        }
+        
+        # Download the ZIP file
+        Invoke-WebRequest -Uri $downloadUrl -OutFile "azcopy.zip" -ErrorAction Stop
+        
+        # Verify the ZIP file was downloaded and is valid
+        if (-not (Test-Path "azcopy.zip") -or (Get-Item "azcopy.zip").Length -eq 0) {
+            Write-Error "Failed to download AzCopy ZIP file or file is empty"
+            exit 1
+        }
+        
+        # Extract the ZIP file
+        Expand-Archive -Path '.\azcopy.zip' -DestinationPath '.\'
+        Remove-Item -Path '.\azcopy.zip' -Force
+        
+        # Find the azcopy.exe file
+        $azCopyPath = (Get-ChildItem -Path '.\' -Recurse -File -Filter 'azcopy.exe').FullName
+        
+        if (-not $azCopyPath -or -not (Test-Path $azCopyPath)) {
+            Write-Error "AzCopy executable not found after extraction"
+            exit 1
+        }
+        
+        Write-Host "AzCopy downloaded and extracted successfully to: $azCopyPath"
+    }
+    catch {
+        Write-Error "Failed to download or extract AzCopy: $($_.Exception.Message)"
+        exit 1
+    }
 }
 
 #Build Folder
