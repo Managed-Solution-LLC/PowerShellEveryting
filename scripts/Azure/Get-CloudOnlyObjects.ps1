@@ -21,11 +21,11 @@
     Output: CSV and JSON files for users, groups, and distribution groups
 
 .EXAMPLE
-    .\Get-CloudOnlyUsers.ps1
+    .\Get-CloudOnlyObjects.ps1
     Exports all cloud-only users, groups, and distribution groups to the default output directory.
 
 .EXAMPLE
-    .\Get-CloudOnlyUsers.ps1 -OutputPath "C:\Exports" -ExcludePattern "*@testdomain.com"
+    .\Get-CloudOnlyObjects.ps1 -OutputPath "C:\Exports" -ExcludePattern "*@testdomain.com"
     Exports to C:\Exports and excludes users with UPNs matching *@testdomain.com
 .NOTES
     Author: William Ford
