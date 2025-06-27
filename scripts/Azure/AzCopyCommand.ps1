@@ -43,25 +43,31 @@
 # =============================
 [CmdletBinding()]
 param(
-    [Parameter(Mandatory=$true,Position=0,HelpMessage="Enter the folder name you wish to upload to.")]
-    [string]$folder,
-
-    [Parameter(Mandatory=$true,Position=1,HelpMessage="Enter the tier (Hot, Cool, Cold, Archive)")]
+    [Parameter(Mandatory=$true,Position=0,HelpMessage="Enter the tier (Hot, Cool, Cold, Archive)")]
+    [ValidateSet("Hot", "Cool", "Cold", "Archive")]
+    [ValidateNotNullOrEmpty()]
     [string]$tier,
 
-    [Parameter(Mandatory=$true,Position=2,HelpMessage="Enter the Blob Storage SAS Token")]
+    [Parameter(Mandatory=$true,Position=1,HelpMessage="Enter the Blob Storage SAS Token")]
+    [ValidateNotNullOrEmpty()]
     [string]$blobSasToken,
 
-    [Parameter(Mandatory=$true,Position=3,HelpMessage="Enter the path to the files to be archived")]
+    [Parameter(Mandatory=$true,Position=2,HelpMessage="Enter the path to the files to be archived")]
+    [ValidateNotNullOrEmpty()]
+    [ValidateScript({ Test-Path $_ -PathType Container })]
     [string]$path,
 
-    [Parameter(Mandatory=$false,Position=4,HelpMessage="Enter the AzCopy executable path if not in current directory")]
+    [Parameter(Mandatory=$false,Position=3,HelpMessage="Enter the AzCopy executable path if not in current directory")]
     [string]$azCopyPath = ".\azcopy.exe",
 
-    [Parameter(Mandatory=$false,Position=5,HelpMessage="Enter the Root Folder for the archive, default is /Archive/")]
-    [string]$rootFolder = "/Archive/"
+    [Parameter(Mandatory=$true,Position=4,HelpMessage="Enter the folder name you wish to upload to.")]
+    [string]$folder,
+
+    [Parameter(Mandatory=$false,Position=5,HelpMessage="Enter the Root Folder for the archive, default is none")]
+    [string]$rootFolder = "/"
 
 )
+#region AzCopy Downlaod
 # Check if working directory has azcopy.exe, if not download it
 if (-not (Test-Path -Path "$azCopyPath")) {
     Write-Host "Downloading AzCopy..."
@@ -102,6 +108,7 @@ if (-not (Test-Path -Path "$azCopyPath")) {
         exit 1
     }
 }
+#endregion
 
 #Build Folder
 $folder = $rootFolder + $folder
