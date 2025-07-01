@@ -67,7 +67,10 @@ param(
     [string]$folder,
 
     [Parameter(Mandatory=$false,Position=5,HelpMessage="Enter the Root Folder for the archive, default is none")]
-    [string]$rootFolder = "/"
+    [string]$rootFolder = "/",
+
+    [Parameter(Mandatory=$false,Position=6,HelpMessage="Set to true to copy recursively, default is true")
+    [bool]$recursive = $true
 
 )
 #region AzCopy Downlaod
@@ -145,4 +148,4 @@ if ($folder -ne "") {
     $blobSasToken = $blobSasTokenBase + $folder + "?" + $blobSasTokenQuery
 }
 
-& $azCopyPath copy $path $blobSasToken --recursive=true --blob-type=BlockBlob --block-blob-tier=$tier
+& $azCopyPath copy $path $blobSasToken --recursive=$recursive --blob-type=BlockBlob --block-blob-tier=$tier
