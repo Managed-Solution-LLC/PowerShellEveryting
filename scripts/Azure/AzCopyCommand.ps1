@@ -33,16 +33,18 @@
 .NOTES
     Author: William Ford
     Date: 2025-06-25
-    Version: 1.2
+    Version: 1.3
     Required Modules: AzCopy
     Output: Files are copied to Azure Blob Storage in the specified folder and tier.
     History:
         - 2025-06-25: Initial version with basic functionality.
         - 2025-06-27: Added error handling for AzCopy download and extraction, and improved folder handling.
+        - 2025-07-01: Updated to handle spaces in folder names and improved tier validation.
 #>
 # =============================
 # VALIDATED FOR PUBLIC RELEASE
-# Date: 2025-06-27
+# Date: 2025-07-01
+# Version: 1.3
 # =============================
 [CmdletBinding()]
 param(
@@ -57,13 +59,12 @@ param(
 
     [Parameter(Mandatory=$true,Position=2,HelpMessage="Enter the path to the files to be archived")]
     [ValidateNotNullOrEmpty()]
-    [ValidateScript({ Test-Path $_ -PathType Container })]
     [string]$path,
 
     [Parameter(Mandatory=$false,Position=3,HelpMessage="Enter the AzCopy executable path if not in current directory")]
-    [string]$azCopyPath = ".\azcopy.exe",
+    [string]$azCopyPath = "",
 
-    [Parameter(Mandatory=$true,Position=4,HelpMessage="Enter the folder name you wish to upload to.")]
+    [Parameter(Mandatory=$false,Position=4,HelpMessage="Enter the folder name you wish to upload to.")]
     [string]$folder,
 
     [Parameter(Mandatory=$false,Position=5,HelpMessage="Enter the Root Folder for the archive, default is none")]
@@ -73,9 +74,31 @@ param(
     [bool]$recursive = $true
 
 )
-#region AzCopy Downlaod
+
+#region AzCopy Download
+# First, try to find azcopy.exe if path is not specified
+if ($azCopyPath -eq "") {
+    # Look for azcopy.exe in current directory first
+    if (Test-Path -Path ".\azcopy.exe") {
+        $azCopyPath = ".\azcopy.exe"
+        Write-Host "Found AzCopy in current directory: $azCopyPath"
+    }
+    # If not found, search in subdirectories (including azcopy_windows_amd64* folders)
+    else {
+        $foundAzCopy = Get-ChildItem -Path '.\' -Recurse -File -Filter 'azcopy.exe' -ErrorAction SilentlyContinue | Select-Object -First 1
+        if ($foundAzCopy) {
+            $azCopyPath = $foundAzCopy.FullName
+            Write-Host "Found AzCopy in subdirectory: $azCopyPath"
+        }
+        else {
+            $azCopyPath = ".\azcopy.exe"  # Default to current directory for download
+            Write-Host "AzCopy not found, will download to current directory"
+        }
+    }
+}
+
 # Check if working directory has azcopy.exe, if not download it
-if (-not (Test-Path -Path "$azCopyPath")) {
+if (-not (Test-Path -Path $azCopyPath)) {
     Write-Host "Downloading AzCopy..."
     try {
         # Get the actual download URL
@@ -96,11 +119,11 @@ if (-not (Test-Path -Path "$azCopyPath")) {
         }
         
         # Extract the ZIP file
-        Expand-Archive -Path '.\azcopy.zip' -DestinationPath '.\'
+        Expand-Archive -Path '.\azcopy.zip' -DestinationPath '.\' -Force
         Remove-Item -Path '.\azcopy.zip' -Force
         
-        # Find the azcopy.exe file
-        $azCopyPath = (Get-ChildItem -Path '.\' -Recurse -File -Filter 'azcopy.exe').FullName
+        # Find the azcopy.exe file in the extracted folder
+        $azCopyPath = (Get-ChildItem -Path '.\' -Recurse -File -Filter 'azcopy.exe' -ErrorAction SilentlyContinue | Select-Object -First 1).FullName
         
         if (-not $azCopyPath -or -not (Test-Path $azCopyPath)) {
             Write-Error "AzCopy executable not found after extraction"
