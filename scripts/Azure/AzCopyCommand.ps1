@@ -69,7 +69,7 @@ param(
     [Parameter(Mandatory=$false,Position=5,HelpMessage="Enter the Root Folder for the archive, default is none")]
     [string]$rootFolder = "/",
 
-    [Parameter(Mandatory=$false,Position=6,HelpMessage="Set to true to copy recursively, default is true")
+    [Parameter(Mandatory=$false,Position=6,HelpMessage="Set to true to copy recursively, default is true")]
     [bool]$recursive = $true
 
 )
