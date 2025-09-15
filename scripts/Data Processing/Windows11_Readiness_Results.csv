@@ -1,0 +1,1225 @@
+"MachineName","LastRunTime","Windows11ReadinessStatus","CommandExecutionStatus","FailureSource","StorageResult","MemoryResult","TPMResult","ProcessorResult","SecureBootResult","OSVersionResult","StorageDetails","MemoryDetails","TPMDetails","ProcessorDetails","SecureBootDetails","OSDetails"
+"BN-CV-EXM001","2025-01-28T23:47:04Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=119GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=3096
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 11} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-CV-EXM003","2025-01-28T23:47:17Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=119GB :: PASS","Memory: System_Memory=4GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=3096
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 11} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-CV-EXM004","2025-01-28T23:47:04Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=119GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=3096
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 11} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-CV02-EXM001","2025-01-28T23:47:19Z","Unsupported","Success","TPM Ver, Proc fail","PASS","PASS","FAIL","FAIL","PASS","FAIL","Storage: OSDiskSize=232GB :: PASS","Memory: System_Memory=4GB :: PASS","TPM: TPMVersion=1.2, 2, 3 :: FAIL","Processor: {AddressWidth=64
+MaxClockSpeed=3192
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 94 Stepping 3} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: FAIL"
+"BN-CV02-EXM002","2025-01-28T23:47:31Z","Unsupported","Success","TPM Ver, Proc fail","PASS","PASS","FAIL","FAIL","PASS","PASS","Storage: OSDiskSize=232GB :: PASS","Memory: System_Memory=4GB :: PASS","TPM: TPMVersion=1.2, 2, 3 :: FAIL","Processor: {AddressWidth=64
+MaxClockSpeed=2712
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 94 Stepping 3} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-CV-MAS002","2025-01-28T23:47:06Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2112
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-CV-MAS004","2025-01-28T23:47:08Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2208
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-CV-MDR001","2025-01-28T23:47:05Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=16GB :: PASS","TPM: TPMVersion=2.0, 0, 1.59 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1600
+NumberOfLogicalCores=20
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 191 Stepping 2} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-CV-MDR002","2025-01-28T23:47:05Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=117GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=3096
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 11} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-CV-MDR003","2025-01-28T23:47:09Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=119GB :: PASS","Memory: System_Memory=4GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2208
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-CV-NRS002","2025-01-28T23:47:04Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=16GB :: PASS","TPM: TPMVersion=2.0, 0, 1.59 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1600
+NumberOfLogicalCores=20
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 191 Stepping 2} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-CV-REC001","2025-01-28T23:47:12Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=232GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=3096
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 11} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-CV-REC002","2025-01-28T23:47:18Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2208
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-CV02-EXM003","2025-01-28T23:47:04Z","Unsupported","Success","TPM Ver, Proc fail","PASS","PASS","FAIL","FAIL","PASS","PASS","Storage: OSDiskSize=232GB :: PASS","Memory: System_Memory=4GB :: PASS","TPM: TPMVersion=1.2, 2, 3 :: FAIL","Processor: {AddressWidth=64
+MaxClockSpeed=2712
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 94 Stepping 3} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-CV02-EXM004","2025-01-28T23:47:05Z","Unsupported","Success","TPM Ver, Proc fail","PASS","PASS","FAIL","FAIL","PASS","PASS","Storage: OSDiskSize=232GB :: PASS","Memory: System_Memory=4GB :: PASS","TPM: TPMVersion=1.2, 2, 3 :: FAIL","Processor: {AddressWidth=64
+MaxClockSpeed=2712
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 94 Stepping 3} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-CV02-NRS001","2025-01-28T23:47:05Z","Unsupported","Success","TPM Ver, Proc fail","PASS","PASS","PASS","FAIL","PASS","PASS","Storage: OSDiskSize=235GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=3192
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 94 Stepping 3} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-CV-EXM005","2025-01-28T23:47:04Z","Unsupported","Success","TPM Ver, Proc fail","PASS","PASS","FAIL","FAIL","PASS","PASS","Storage: OSDiskSize=232GB :: PASS","Memory: System_Memory=4GB :: PASS","TPM: TPMVersion=1.2, 2, 3 :: FAIL","Processor: {AddressWidth=64
+MaxClockSpeed=2712
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 94 Stepping 3} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-CV-EXM008","2025-01-28T23:47:12Z","Unsupported","Success","Proc fail","PASS","PASS","PASS","FAIL","PASS","PASS","Storage: OSDiskSize=237GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=3192
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 94 Stepping 3} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-CV02-MDR002","2025-01-28T23:47:14Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=16GB :: PASS","TPM: TPMVersion=2.0, 0, 1.59 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1700
+NumberOfLogicalCores=20
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 191 Stepping 2} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-CV02-MDR003","2025-01-28T23:47:05Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=119GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=3096
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 11} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-CV02-MDR005","2025-01-28T23:47:14Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=16GB :: PASS","TPM: TPMVersion=2.0, 0, 1.59 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1600
+NumberOfLogicalCores=20
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 191 Stepping 2} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-CV-REC003","2025-01-28T23:47:08Z","Unsupported","Success","Proc fail","PASS","PASS","PASS","FAIL","PASS","PASS","Storage: OSDiskSize=232GB :: PASS","Memory: System_Memory=4GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=3408
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 9
+PlatformId 2} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-CV02-NRS002","2025-01-28T23:47:15Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=119GB :: PASS","Memory: System_Memory=12GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2112
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-CV02-REC003","2025-01-28T23:47:15Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2208
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-CV02-REC007","2025-01-28T23:47:16Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=119GB :: PASS","Memory: System_Memory=12GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=3096
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 11} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-CV02-REC008","2025-01-28T23:47:04Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=119GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2208
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-EC-EXM001","2025-01-28T23:47:11Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2112
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-EC-EXM002","2025-01-28T23:47:09Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=119GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2112
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-EC-EXM005","2025-01-28T23:47:14Z","Unsupported","Success","Proc fail","PASS","PASS","PASS","FAIL","PASS","PASS","Storage: OSDiskSize=237GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2712
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 9
+PlatformId 2} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-EC-EXM006","2025-01-28T23:47:09Z","Unsupported","Success","Proc fail","PASS","PASS","PASS","FAIL","PASS","PASS","Storage: OSDiskSize=237GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2712
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 9
+PlatformId 2} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-EC-EXM007","2025-01-28T23:47:08Z","Unsupported","Success","TPM Ver, Proc fail","PASS","PASS","FAIL","FAIL","PASS","FAIL","Storage: OSDiskSize=111GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=1.2, 2, 3 :: FAIL","Processor: {AddressWidth=64
+MaxClockSpeed=2195
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 61 Stepping 4} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: FAIL"
+"BN-EC-EXM014","2025-01-28T23:47:12Z","Unsupported","Success","Proc fail","PASS","PASS","PASS","FAIL","PASS","PASS","Storage: OSDiskSize=232GB :: PASS","Memory: System_Memory=12GB :: PASS","TPM: TPMVersion=2.0, 0, 1.03 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2195
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 61 Stepping 4} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-EC-MAC003","2025-01-28T23:47:11Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=12GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2112
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-EC-MAS001","2025-01-28T23:47:10Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=12GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2112
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-EC-MAS002","2025-01-28T23:47:14Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=12GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2112
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-EC-MAS004","2025-01-28T23:47:25Z","Unsupported","Success","Proc fail","PASS","PASS","PASS","FAIL","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=12GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=792
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-EC-MAS005","2025-01-28T23:47:07Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=12GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2112
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-EC-MDR001","2025-01-28T23:47:06Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=4GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2112
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-EC-MDR002","2025-01-28T23:47:04Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=16GB :: PASS","TPM: TPMVersion=2.0, 0, 1.59 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1600
+NumberOfLogicalCores=20
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 191 Stepping 2} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-EC-MGR001","2025-01-28T23:47:13Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=12GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2112
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-EC-NRS001","2025-01-28T23:47:05Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=12GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2112
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-EC-REC001","2025-01-28T23:47:10Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=12GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2112
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-EC-REC002","2025-01-28T23:47:08Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=12GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2112
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-ECRM-EXM001","2025-01-28T23:47:08Z","Unsupported","Success","TPM Ver, Proc fail","PASS","PASS","FAIL","FAIL","PASS","PASS","Storage: OSDiskSize=237GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=1.2, 2, 3 :: FAIL","Processor: {AddressWidth=64
+MaxClockSpeed=2808
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 78 Stepping 3} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-ECRM-EXM002","2025-01-28T23:47:06Z","Unsupported","Success","TPM Ver, Proc fail","PASS","PASS","FAIL","FAIL","PASS","PASS","Storage: OSDiskSize=237GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=1.2, 2, 3 :: FAIL","Processor: {AddressWidth=64
+MaxClockSpeed=2808
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 78 Stepping 3} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-EN-EXM002","2025-01-28T23:47:09Z","Unsupported","Success","Proc fail","PASS","PASS","PASS","FAIL","PASS","PASS","Storage: OSDiskSize=232GB :: PASS","Memory: System_Memory=4GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2400
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 78 Stepping 3} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-EN-MDR001","2025-01-28T23:47:08Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2208
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-ES-EXM001","2025-01-28T23:47:15Z","Unsupported","Success","Proc fail","PASS","PASS","PASS","FAIL","PASS","PASS","Storage: OSDiskSize=232GB :: PASS","Memory: System_Memory=4GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2400
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 78 Stepping 3} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-ES-EXM004","2025-01-28T23:47:08Z","Unsupported","Success","Proc fail","PASS","PASS","PASS","FAIL","PASS","PASS","Storage: OSDiskSize=232GB :: PASS","Memory: System_Memory=4GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2400
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 78 Stepping 3} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-ES-EXM005","2025-01-28T23:47:39Z","Unsupported","Success","Proc fail","PASS","PASS","PASS","FAIL","PASS","PASS","Storage: OSDiskSize=232GB :: PASS","Memory: System_Memory=4GB :: PASS","TPM: TPMVersion=2.0, 0, 0.93 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2301
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 69 Stepping 1} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-ES-EXM009","2025-01-28T23:47:14Z","Unsupported","Success","Proc fail","PASS","PASS","PASS","FAIL","PASS","PASS","Storage: OSDiskSize=232GB :: PASS","Memory: System_Memory=4GB :: PASS","TPM: TPMVersion=2.0, 0, 1.03 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2195
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 61 Stepping 4} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-ES-MA002","2025-01-28T23:47:07Z","Unsupported","Success","Proc fail","PASS","PASS","PASS","FAIL","PASS","PASS","Storage: OSDiskSize=235GB :: PASS","Memory: System_Memory=16GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=3192
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 94 Stepping 3} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-ES-MDR002","2025-01-28T23:47:11Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=119GB :: PASS","Memory: System_Memory=4GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=3096
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 11} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-ES-MDR007","2025-01-28T23:47:16Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=4GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=3096
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 11} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-ES-MDR009","2025-01-28T23:47:06Z","Unsupported","Success","Proc fail","PASS","PASS","FAIL","FAIL","PASS","FAIL","Storage: OSDiskSize=476GB :: PASS","Memory: System_Memory=4GB :: PASS","TPM: TPMVersion=1.2, 2, 3 :: FAIL","Processor: {AddressWidth=64
+MaxClockSpeed=2712
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 94 Stepping 3} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: FAIL"
+"BN-ES-MDR010","2025-01-28T23:47:13Z","Unsupported","Success","Proc fail","PASS","PASS","PASS","FAIL","PASS","PASS","Storage: OSDiskSize=235GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=3192
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 94 Stepping 3} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-ES-MDR011","2025-01-28T23:47:10Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=16GB :: PASS","TPM: TPMVersion=2.0, 0, 1.59 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1600
+NumberOfLogicalCores=20
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 191 Stepping 2} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-ES-REC002","2025-01-28T23:47:08Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=119GB :: PASS","Memory: System_Memory=12GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2112
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-ESRM-EXM007","2025-01-28T23:47:08Z","Unsupported","Success","Proc fail","PASS","PASS","PASS","FAIL","PASS","PASS","Storage: OSDiskSize=232GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2808
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 78 Stepping 3} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-ESRM-EXM008","2025-01-28T23:47:11Z","Unsupported","Success","Proc fail","PASS","PASS","PASS","FAIL","PASS","FAIL","Storage: OSDiskSize=232GB :: PASS","Memory: System_Memory=4GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2400
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 78 Stepping 3} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: FAIL"
+"BN-FV-EXM004","2025-01-28T23:47:07Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=16GB :: PASS","TPM: TPMVersion=2.0, 0, 1.59 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1600
+NumberOfLogicalCores=20
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 191 Stepping 2} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-FV01-EXM001","2025-01-28T23:47:07Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2112
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-FV01-EXM002","2025-01-28T23:47:12Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=237GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2112
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-FV01-EXM003","2025-01-28T23:47:15Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2112
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-FV01-EXM005","2025-01-28T23:47:04Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2112
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-FV01-EXM006","2025-01-28T23:47:05Z","Unsupported","Success","TPM Ver, Proc fail","PASS","PASS","FAIL","FAIL","PASS","FAIL","Storage: OSDiskSize=232GB :: PASS","Memory: System_Memory=4GB :: PASS","TPM: TPMVersion=1.2, 2, 3 :: FAIL","Processor: {AddressWidth=64
+MaxClockSpeed=3192
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 94 Stepping 3} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: FAIL"
+"BN-FV01-MAS002","2025-01-28T23:47:10Z","Unsupported","Success","Proc fail","PASS","PASS","PASS","FAIL","PASS","PASS","Storage: OSDiskSize=235GB :: PASS","Memory: System_Memory=16GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=3192
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 94 Stepping 3} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-FV01-MAS003","2025-01-28T23:47:13Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=12GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2112
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-FV01-MDR001","2025-01-28T23:47:12Z","Unsupported","Success","Proc fail","PASS","PASS","PASS","FAIL","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2712
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 9
+PlatformId 2} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-FV01-MDR002","2025-01-28T23:47:15Z","Unsupported","Success","TPM Ver, Proc fail","PASS","PASS","FAIL","FAIL","PASS","PASS","Storage: OSDiskSize=232GB :: PASS","Memory: System_Memory=4GB :: PASS","TPM: TPMVersion=1.2, 2, 3 :: FAIL","Processor: {AddressWidth=64
+MaxClockSpeed=2712
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 94 Stepping 3} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-FV01-MDR003","2025-01-28T23:47:06Z","Unsupported","Success","Proc fail","PASS","PASS","PASS","FAIL","PASS","PASS","Storage: OSDiskSize=237GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=3192
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 94 Stepping 3} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-FV01-MGR001","2025-01-28T23:47:14Z","Unsupported","Success","Proc fail","PASS","PASS","PASS","FAIL","PASS","PASS","Storage: OSDiskSize=235GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=3192
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 94 Stepping 3} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-FV01-REC003","2025-01-28T23:47:14Z","Unsupported","Success","Proc fail","PASS","PASS","PASS","FAIL","PASS","PASS","Storage: OSDiskSize=237GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2712
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 9
+PlatformId 2} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-FV01-REC006","2025-01-28T23:47:09Z","Unsupported","Success","Proc fail","PASS","PASS","PASS","FAIL","PASS","PASS","Storage: OSDiskSize=237GB :: PASS","Memory: System_Memory=12GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2712
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 9
+PlatformId 2} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-FV2-MAS001","2025-01-28T23:47:07Z","Unsupported","Success","TPM Ver, Proc fail","PASS","PASS","FAIL","FAIL","PASS","PASS","Storage: OSDiskSize=232GB :: PASS","Memory: System_Memory=4GB :: PASS","TPM: TPMVersion=1.2, 2, 3 :: FAIL","Processor: {AddressWidth=64
+MaxClockSpeed=3192
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 94 Stepping 3} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-FV2-REC003","2025-01-28T23:47:10Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=119GB :: PASS","Memory: System_Memory=12GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=3096
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 11} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-FVRM-EXM008","2025-01-28T23:47:05Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=237GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1896
+NumberOfLogicalCores=8
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 142 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-HC-EXM001","2025-01-28T23:47:12Z","Unsupported","Success","Proc fail","PASS","PASS","PASS","FAIL","PASS","PASS","Storage: OSDiskSize=237GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2712
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 9
+PlatformId 2} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-HC-EXM002","2025-01-28T23:47:12Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=119GB :: PASS","Memory: System_Memory=4GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=3096
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 11} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-HC-EXM003","2025-01-28T23:47:12Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=4GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=3096
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 11} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-HC-EXM004","2025-01-28T23:47:11Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=4GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=3096
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 11} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-HC-MDR002","2025-01-28T23:47:12Z","Unsupported","Success","Proc fail","PASS","PASS","PASS","FAIL","PASS","PASS","Storage: OSDiskSize=110GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=3408
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 9
+PlatformId 2} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-HC-MDR003","2025-01-28T23:47:10Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2208
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-HC-NRS002","2025-01-28T23:47:12Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=3096
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 11} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-HC-REC002","2025-01-28T23:47:10Z","Unsupported","Success","Proc fail","PASS","PASS","PASS","FAIL","PASS","FAIL","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2808
+NumberOfLogicalCores=8
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 94 Stepping 3} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: FAIL"
+"BN-HC-REC003","2025-01-28T23:47:06Z","Unsupported","Success","Proc fail","PASS","PASS","PASS","FAIL","PASS","PASS","Storage: OSDiskSize=237GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2712
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 9
+PlatformId 2} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-HC-REC004","2025-01-28T23:47:18Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=4GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2208
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-HC-REC005","2025-01-28T23:47:15Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=119GB :: PASS","Memory: System_Memory=4GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=3096
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 11} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-LJ-EXM001","2025-01-28T23:47:05Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2304
+NumberOfLogicalCores=12
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 165 Stepping 3} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-LJ-EXM002","2025-01-28T23:47:08Z","Unsupported","Success","TPM Ver, Proc fail","PASS","PASS","FAIL","FAIL","PASS","PASS","Storage: OSDiskSize=119GB :: PASS","Memory: System_Memory=4GB :: PASS","TPM: TPMVersion=1.2, 2, 3 :: FAIL","Processor: {AddressWidth=64
+MaxClockSpeed=3192
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 94 Stepping 3} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-LJ-EXM003","2025-01-28T23:47:05Z","Unsupported","Success","TPM Ver, Proc fail","PASS","PASS","FAIL","FAIL","PASS","PASS","Storage: OSDiskSize=119GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=1.2, 2, 3 :: FAIL","Processor: {AddressWidth=64
+MaxClockSpeed=3192
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 94 Stepping 3} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-LJ-MDR001","2025-01-28T23:47:08Z","Unsupported","Success","Proc fail","PASS","PASS","PASS","PASS","PASS","FAIL","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2208
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: FAIL"
+"BN-LJ-MDR002","2025-01-28T23:47:07Z","Unsupported","Success","Proc fail","PASS","PASS","PASS","FAIL","PASS","PASS","Storage: OSDiskSize=237GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2712
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 9
+PlatformId 2} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-LJ-MDR003","2025-01-28T23:47:11Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=119GB :: PASS","Memory: System_Memory=12GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2112
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-LJ-REC001","2025-01-28T23:47:13Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=12GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2208
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-LJ-REC002","2025-01-28T23:47:09Z","Unsupported","Success","Proc fail","PASS","PASS","PASS","FAIL","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=16GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2808
+NumberOfLogicalCores=8
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 94 Stepping 3} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-LJ-REC003","2025-01-28T23:47:15Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2112
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-LM-EXM001","2025-01-28T23:47:15Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=119GB :: PASS","Memory: System_Memory=4GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=3096
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 11} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-LM-EXM002","2025-01-28T23:47:05Z","Unsupported","Success","Proc fail","PASS","PASS","PASS","FAIL","PASS","PASS","Storage: OSDiskSize=232GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=3408
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 9
+PlatformId 2} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-LM-EXM003","2025-01-28T23:47:10Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2208
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-LM-EXM004","2025-01-28T23:47:05Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=119GB :: PASS","Memory: System_Memory=4GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=3096
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 11} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-LM-MAS003","2025-01-28T23:47:08Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=16GB :: PASS","TPM: TPMVersion=2.0, 0, 1.59 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1600
+NumberOfLogicalCores=20
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 191 Stepping 2} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-LM-MAS004","2025-01-28T23:47:06Z","Unsupported","Success","Proc fail","PASS","PASS","PASS","PASS","PASS","FAIL","Storage: OSDiskSize=119GB :: PASS","Memory: System_Memory=16GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=3096
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 11} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: FAIL"
+"BN-LM-MAS005","2025-01-28T23:47:11Z","Unsupported","Success","Proc fail","PASS","PASS","PASS","FAIL","PASS","PASS","Storage: OSDiskSize=476GB :: PASS","Memory: System_Memory=32GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2904
+NumberOfLogicalCores=8
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 9
+PlatformId 2} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-LM-MAS006","2025-01-28T23:47:10Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=232GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=3096
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 11} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-LM-MAS007","2025-01-28T23:47:03Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=119GB :: PASS","Memory: System_Memory=12GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=3096
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 11} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-LM-MDR001","2025-01-28T23:47:08Z","Unsupported","Success","Proc fail","PASS","PASS","PASS","FAIL","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2712
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 9
+PlatformId 2} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-LM-MDR002","2025-01-28T23:47:08Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2304
+NumberOfLogicalCores=12
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 165 Stepping 3} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-LM-MDR003","2025-01-28T23:47:09Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2208
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-LM-REC001","2025-01-28T23:47:18Z","Unsupported","Success","Proc fail","PASS","PASS","PASS","FAIL","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=3408
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 9
+PlatformId 2} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-NCTY-EXM004","2025-01-28T23:47:12Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=119GB :: PASS","Memory: System_Memory=4GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=3096
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 11} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-NCTY-EXM005","2025-01-28T23:47:11Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=119GB :: PASS","Memory: System_Memory=4GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=3096
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 11} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-NCTY-EXM007","2025-01-28T23:47:12Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=119GB :: PASS","Memory: System_Memory=4GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=3096
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 11} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-NCTY-MAS001","2025-01-28T23:47:11Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=12GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2208
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-NC-REF001","2025-01-28T23:47:07Z","Unsupported","Success","Proc fail","PASS","PASS","PASS","FAIL","PASS","PASS","Storage: OSDiskSize=235GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=3192
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 94 Stepping 3} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-NCTY-MDR004","2025-01-28T23:47:12Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=119GB :: PASS","Memory: System_Memory=12GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2112
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-NCTY-MGR001","2025-01-28T23:47:07Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=4GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2208
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-NCTY-NRS001","2025-01-28T23:47:08Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=12GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2208
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-NCTY-REC001","2025-01-28T23:47:13Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=12GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2208
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-NCTY-EXM003","2025-01-28T23:47:12Z","Unsupported","Success","Proc fail","PASS","PASS","PASS","FAIL","PASS","PASS","Storage: OSDiskSize=232GB :: PASS","Memory: System_Memory=4GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2400
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 78 Stepping 3} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-NCTY-EXM006","2025-01-28T23:47:11Z","Unsupported","Success","Proc fail","PASS","PASS","PASS","FAIL","PASS","PASS","Storage: OSDiskSize=232GB :: PASS","Memory: System_Memory=4GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2400
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 78 Stepping 3} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-NCTY-MAS003","2025-01-28T23:47:16Z","Unsupported","Success","Proc fail","PASS","PASS","PASS","PASS","PASS","FAIL","Storage: OSDiskSize=119GB :: PASS","Memory: System_Memory=4GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=3096
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 11} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: FAIL"
+"BN-NCTY-MAS004","2025-01-28T23:47:10Z","Unsupported","Success","Proc fail","PASS","PASS","PASS","FAIL","PASS","PASS","Storage: OSDiskSize=235GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=3192
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 94 Stepping 3} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-OC-MAS002","2025-01-28T23:47:11Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2208
+NumberOfLogicalCores=8
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 142 Stepping 12} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-NCTY-MDR002","2025-01-28T23:47:11Z","Unsupported","Success","Proc fail","PASS","PASS","PASS","FAIL","PASS","PASS","Storage: OSDiskSize=235GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=3192
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 94 Stepping 3} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-OC-MDR003","2025-01-28T23:47:14Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2208
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-OC-MGR001","2025-01-28T23:47:09Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=12GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=3096
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 11} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-OC-MGR002","2025-01-28T23:47:11Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=12GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=3096
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 11} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-NCTY-MDR003","2025-01-28T23:47:09Z","Unsupported","Success","Proc fail","PASS","PASS","PASS","PASS","PASS","FAIL","Storage: OSDiskSize=119GB :: PASS","Memory: System_Memory=4GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=3096
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 11} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: FAIL"
+"BN-OC-REC003","2025-01-28T23:47:04Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=16GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2208
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-OC-REC006","2025-01-28T23:47:12Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=16GB :: PASS","TPM: TPMVersion=2.0, 0, 1.59 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1600
+NumberOfLogicalCores=20
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 191 Stepping 2} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-OR-EXM001","2025-01-28T23:47:15Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1382
+NumberOfLogicalCores=8
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 140 Stepping 1} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-OR-EXM002","2025-01-28T23:47:12Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1382
+NumberOfLogicalCores=8
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 140 Stepping 1} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-OR-EXM003","2025-01-28T23:47:12Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1382
+NumberOfLogicalCores=8
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 140 Stepping 1} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-OR-MDR001","2025-01-28T23:47:08Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2000
+NumberOfLogicalCores=12
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 151 Stepping 5} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-OR-MDR002","2025-01-28T23:47:05Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2000
+NumberOfLogicalCores=12
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 151 Stepping 5} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-OR-REC001","2025-01-28T23:47:13Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2000
+NumberOfLogicalCores=12
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 151 Stepping 5} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-PWY-EXM001","2025-01-28T23:47:12Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=4GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2112
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-PWY-EXM002","2025-01-28T23:47:06Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=4GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2112
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-OC-EXM001","2025-01-28T23:47:11Z","Unsupported","Success","TPM Ver, Proc fail","PASS","PASS","FAIL","FAIL","PASS","PASS","Storage: OSDiskSize=232GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=1.2, 2, 3 :: FAIL","Processor: {AddressWidth=64
+MaxClockSpeed=2400
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 78 Stepping 3} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-PWY-REC001","2025-01-28T23:47:16Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=4GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2112
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-PWY-REC002","2025-01-28T23:47:08Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=119GB :: PASS","Memory: System_Memory=4GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2112
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-VAC-MDR002","2025-01-28T23:47:46Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=119GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=3096
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 11} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-VAC-MDR003","2025-01-28T23:47:07Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=3096
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 11} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-VAC-MDR004","2025-01-28T23:47:08Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=24GB :: PASS","TPM: TPMVersion=2.0, 0, 1.59 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1600
+NumberOfLogicalCores=20
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 191 Stepping 2} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-OC-EXM002","2025-01-28T23:47:07Z","Unsupported","Success","Proc fail","PASS","PASS","PASS","FAIL","PASS","PASS","Storage: OSDiskSize=232GB :: PASS","Memory: System_Memory=4GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2400
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 78 Stepping 3} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-OC-EXM003","2025-01-28T23:47:06Z","Unsupported","Success","TPM Ver, Proc fail","PASS","PASS","FAIL","FAIL","PASS","PASS","Storage: OSDiskSize=232GB :: PASS","Memory: System_Memory=4GB :: PASS","TPM: TPMVersion=1.2, 2, 3 :: FAIL","Processor: {AddressWidth=64
+MaxClockSpeed=2712
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 94 Stepping 3} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-OC-EXM006","2025-01-28T23:47:15Z","Unsupported","Success","Proc fail","PASS","PASS","PASS","FAIL","PASS","PASS","Storage: OSDiskSize=237GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2496
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 78 Stepping 3} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-OC-MAS003","2025-01-28T23:47:12Z","Unsupported","Success","TPM Ver, Proc fail","PASS","PASS","FAIL","FAIL","PASS","PASS","Storage: OSDiskSize=119GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=1.2, 2, 3 :: FAIL","Processor: {AddressWidth=64
+MaxClockSpeed=3192
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 94 Stepping 3} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-OC-REC001","2025-01-28T23:47:10Z","Unsupported","Success","Proc fail","PASS","PASS","PASS","FAIL","PASS","PASS","Storage: OSDiskSize=237GB :: PASS","Memory: System_Memory=12GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2712
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 9
+PlatformId 2} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BN-PWY-MDR001","2025-01-28T23:47:12Z","Unsupported","Success","Proc fail","PASS","PASS","PASS","FAIL","PASS","PASS","Storage: OSDiskSize=237GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2712
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 9
+PlatformId 2} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-001237","2025-01-28T23:47:14Z","Unsupported","Success","Proc fail","PASS","PASS","PASS","FAIL","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2496
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 94 Stepping 3} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-001611","2025-01-28T23:47:13Z","Unsupported","Success","Proc fail","PASS","PASS","PASS","FAIL","PASS","PASS","Storage: OSDiskSize=237GB :: PASS","Memory: System_Memory=12GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2712
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 9
+PlatformId 2} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-001619","2025-01-28T23:47:07Z","Unsupported","Success","Proc fail","PASS","PASS","PASS","FAIL","PASS","PASS","Storage: OSDiskSize=237GB :: PASS","Memory: System_Memory=12GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2712
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 9
+PlatformId 2} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-002659","2025-01-28T23:47:15Z","Unsupported","Success","Proc fail","PASS","PASS","PASS","FAIL","PASS","PASS","Storage: OSDiskSize=235GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=3192
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 94 Stepping 3} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-002712","2025-01-28T23:47:07Z","Unsupported","Success","Proc fail","PASS","PASS","PASS","FAIL","PASS","PASS","Storage: OSDiskSize=476GB :: PASS","Memory: System_Memory=16GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2904
+NumberOfLogicalCores=8
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 9
+PlatformId 2} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-002768","2025-01-28T23:47:08Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=24GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=3096
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 11} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-002799","2025-01-28T23:47:16Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=12GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2112
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-002830","2025-01-28T23:47:16Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=12GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2112
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-002831","2025-01-28T23:47:04Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=119GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2112
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-002835","2025-01-28T23:47:06Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=16GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2112
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-002847","2025-01-28T23:47:15Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=12GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2208
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-002854","2025-01-28T23:47:05Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=16GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2208
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-002858","2025-01-28T23:47:08Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=119GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2208
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-002923","2025-01-28T23:47:18Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=12GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2208
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-002927","2025-01-28T23:47:09Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=16GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2208
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-002932","2025-01-28T23:47:15Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=12GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2208
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-002958","2025-01-28T23:47:09Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2208
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-002975","2025-01-28T23:47:05Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=3096
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 11} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-002981","2025-01-28T23:47:22Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=237GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2496
+NumberOfLogicalCores=8
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 13} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-003074","2025-01-28T23:47:04Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=3096
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 11} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-003172","2025-01-28T23:47:10Z","Unsupported","Success","TPM Ver, Proc fail","PASS","PASS","FAIL","FAIL","PASS","PASS","Storage: OSDiskSize=237GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=1.2, 2, 3 :: FAIL","Processor: {AddressWidth=64
+MaxClockSpeed=2808
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 78 Stepping 3} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-003352","2025-01-28T23:47:12Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=119GB :: PASS","Memory: System_Memory=12GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=3096
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 11} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-003401","2025-01-28T23:47:12Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2208
+NumberOfLogicalCores=8
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 142 Stepping 12} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-003402","2025-01-28T23:47:10Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2208
+NumberOfLogicalCores=8
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 142 Stepping 12} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-003404","2025-01-28T23:47:13Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2208
+NumberOfLogicalCores=8
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 142 Stepping 12} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-003408","2025-01-28T23:47:07Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2208
+NumberOfLogicalCores=8
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 142 Stepping 12} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-003410","2025-01-28T23:47:04Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2208
+NumberOfLogicalCores=8
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 142 Stepping 12} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-003415","2025-01-28T23:47:12Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2208
+NumberOfLogicalCores=8
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 142 Stepping 12} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-003418","2025-01-28T23:47:14Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2208
+NumberOfLogicalCores=8
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 142 Stepping 12} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-003422","2025-01-28T23:47:08Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2208
+NumberOfLogicalCores=8
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 142 Stepping 12} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-003423","2025-01-28T23:47:07Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2208
+NumberOfLogicalCores=8
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 142 Stepping 12} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-003426","2025-01-28T23:47:08Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2208
+NumberOfLogicalCores=8
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 142 Stepping 12} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-003493","2025-01-28T23:47:12Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2208
+NumberOfLogicalCores=8
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 142 Stepping 12} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-003496","2025-01-28T23:47:10Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1382
+NumberOfLogicalCores=8
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 140 Stepping 1} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-003590","2025-01-28T23:47:06Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1382
+NumberOfLogicalCores=8
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 140 Stepping 1} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-003591","2025-01-28T23:47:12Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1382
+NumberOfLogicalCores=8
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 140 Stepping 1} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-003639","2025-01-28T23:47:14Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1382
+NumberOfLogicalCores=8
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 140 Stepping 1} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-003640","2025-01-28T23:47:24Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1382
+NumberOfLogicalCores=8
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 140 Stepping 1} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-003725","2025-01-28T23:47:09Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=236GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1498
+NumberOfLogicalCores=8
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 140 Stepping 1} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-003754","2025-01-28T23:47:11Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2304
+NumberOfLogicalCores=12
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 165 Stepping 3} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-003781","2025-01-28T23:47:12Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=236GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1498
+NumberOfLogicalCores=8
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 140 Stepping 1} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-003791","2025-01-28T23:47:10Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2304
+NumberOfLogicalCores=12
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 165 Stepping 3} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-003888","2025-01-28T23:47:11Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1382
+NumberOfLogicalCores=8
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 140 Stepping 1} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-003898","2025-01-28T23:47:09Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1382
+NumberOfLogicalCores=8
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 140 Stepping 1} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-004117","2025-01-28T23:47:22Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1382
+NumberOfLogicalCores=8
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 140 Stepping 1} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-004118","2025-01-28T23:47:19Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1382
+NumberOfLogicalCores=8
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 140 Stepping 1} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-004119","2025-01-28T23:47:17Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1382
+NumberOfLogicalCores=8
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 140 Stepping 1} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-004124","2025-01-28T23:47:11Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=476GB :: PASS","Memory: System_Memory=32GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1690
+NumberOfLogicalCores=8
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 140 Stepping 1} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-004149","2025-01-28T23:47:06Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.59 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1300
+NumberOfLogicalCores=12
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 186 Stepping 3} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-004157","2025-01-28T23:47:04Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=476GB :: PASS","Memory: System_Memory=32GB :: PASS","TPM: TPMVersion=2.0, 0, 1.59 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1700
+NumberOfLogicalCores=12
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 186 Stepping 3} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-004213","2025-01-28T23:47:11Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.59 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1300
+NumberOfLogicalCores=12
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 186 Stepping 3} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-004214","2025-01-28T23:47:07Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=16GB :: PASS","TPM: TPMVersion=2.0, 0, 1.59 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1300
+NumberOfLogicalCores=12
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 186 Stepping 3} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-004219","2025-01-28T23:47:13Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.59 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1300
+NumberOfLogicalCores=12
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 186 Stepping 3} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-004220","2025-01-28T23:47:08Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.59 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1300
+NumberOfLogicalCores=12
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 186 Stepping 3} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-004221","2025-01-28T23:47:14Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.59 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1300
+NumberOfLogicalCores=12
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 186 Stepping 3} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-004223","2025-01-28T23:47:04Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.59 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1300
+NumberOfLogicalCores=12
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 186 Stepping 3} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-004225","2025-01-29T00:11:16Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.59 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1300
+NumberOfLogicalCores=12
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 186 Stepping 3} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-004227","2025-01-28T23:47:10Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=476GB :: PASS","Memory: System_Memory=32GB :: PASS","TPM: TPMVersion=2.0, 0, 1.59 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1700
+NumberOfLogicalCores=12
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 186 Stepping 3} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-004246","2025-01-28T23:47:11Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=476GB :: PASS","Memory: System_Memory=32GB :: PASS","TPM: TPMVersion=2.0, 0, 1.59 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1700
+NumberOfLogicalCores=12
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 186 Stepping 3} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-004256","2025-01-28T23:47:07Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.59 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1300
+NumberOfLogicalCores=12
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 186 Stepping 3} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-004262","2025-01-28T23:47:05Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.59 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1300
+NumberOfLogicalCores=12
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 186 Stepping 3} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-004275","2025-01-28T23:47:08Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=237GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.59 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1300
+NumberOfLogicalCores=12
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 186 Stepping 3} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-004290","2025-01-28T23:47:10Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.59 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1300
+NumberOfLogicalCores=12
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 186 Stepping 3} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-004292","2025-01-28T23:47:16Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.59 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1300
+NumberOfLogicalCores=12
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 186 Stepping 3} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-004302","2025-01-28T23:47:14Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.59 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1300
+NumberOfLogicalCores=12
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 186 Stepping 3} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-004303","2025-01-28T23:47:05Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=476GB :: PASS","Memory: System_Memory=16GB :: PASS","TPM: TPMVersion=2.0, 0, 1.59 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1700
+NumberOfLogicalCores=14
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 170 Stepping 4} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-004313","2025-01-28T23:47:11Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=953GB :: PASS","Memory: System_Memory=32GB :: PASS","TPM: TPMVersion=2.0, 0, 1.59 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=3301
+NumberOfLogicalCores=16
+Manufacturer=AuthenticAMD
+Caption=AMD64 Family 25 Model 116 Stepping 1} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-004340","2025-01-28T23:47:12Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.59 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1300
+NumberOfLogicalCores=12
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 186 Stepping 3} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-004347","2025-01-28T23:47:12Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=476GB :: PASS","Memory: System_Memory=32GB :: PASS","TPM: TPMVersion=2.0, 0, 1.59 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1700
+NumberOfLogicalCores=12
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 186 Stepping 3} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-004353","2025-01-28T23:47:10Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.59 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1300
+NumberOfLogicalCores=12
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 186 Stepping 3} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-004357","2025-01-28T23:47:13Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.59 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1300
+NumberOfLogicalCores=12
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 186 Stepping 3} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-004359","2025-01-28T23:47:07Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=16GB :: PASS","TPM: TPMVersion=2.0, 0, 1.59 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1700
+NumberOfLogicalCores=20
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 191 Stepping 2} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-004360","2025-01-28T23:47:09Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=476GB :: PASS","Memory: System_Memory=32GB :: PASS","TPM: TPMVersion=2.0, 0, 1.59 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1700
+NumberOfLogicalCores=12
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 186 Stepping 3} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-004373","2025-01-28T23:47:43Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.59 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1300
+NumberOfLogicalCores=12
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 186 Stepping 3} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-004377","2025-01-28T23:47:50Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.59 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1300
+NumberOfLogicalCores=12
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 186 Stepping 3} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-004378","2025-01-28T23:47:11Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.59 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1300
+NumberOfLogicalCores=12
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 186 Stepping 3} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-004414","2025-01-28T23:47:08Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=476GB :: PASS","Memory: System_Memory=32GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1690
+NumberOfLogicalCores=8
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 140 Stepping 1} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-004416","2025-01-28T23:47:02Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=476GB :: PASS","Memory: System_Memory=32GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=1690
+NumberOfLogicalCores=8
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 140 Stepping 1} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"BU-HC-REC006","2025-01-28T23:47:10Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2304
+NumberOfLogicalCores=12
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 165 Stepping 3} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"CI-CVCI-REC001","2025-01-28T23:47:13Z","Unsupported","Success","Proc fail","PASS","PASS","PASS","FAIL","PASS","PASS","Storage: OSDiskSize=237GB :: PASS","Memory: System_Memory=16GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2712
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 9
+PlatformId 2} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"CI-CVCI-REC012","2025-01-28T23:47:09Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2112
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"CI-CVCI-RES001","2025-01-28T23:47:12Z","Unsupported","Success","Proc fail","PASS","PASS","PASS","FAIL","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=12GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2712
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 9
+PlatformId 2} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"CI-CVCI-RES007","2025-01-28T23:47:07Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2208
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"CI-EC-RES002","2025-01-28T23:47:12Z","Unsupported","Success","Proc fail","PASS","PASS","PASS","FAIL","PASS","PASS","Storage: OSDiskSize=237GB :: PASS","Memory: System_Memory=16GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2712
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 9
+PlatformId 2} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"CI-ESRM-RES002","2025-01-29T00:12:08Z","Unsupported","Success","TPM Ver, Proc fail","PASS","PASS","FAIL","FAIL","PASS","PASS","Storage: OSDiskSize=238GB :: PASS","Memory: System_Memory=16GB :: PASS","TPM: TPMVersion=1.2, 2, 3 :: FAIL","Processor: {AddressWidth=64
+MaxClockSpeed=2501
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 78 Stepping 3} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"CI-KM-RES002","2025-01-28T23:47:06Z","Unsupported","Success","Proc fail","PASS","PASS","PASS","PASS","PASS","FAIL","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=8GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=3096
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 11} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: FAIL"
+"CI-LMCI-REC003","2025-01-28T23:47:07Z","Supported","Success",,"PASS","PASS","PASS","PASS","PASS","PASS","Storage: OSDiskSize=118GB :: PASS","Memory: System_Memory=12GB :: PASS","TPM: TPMVersion=2.0, 0, 1.38 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2208
+NumberOfLogicalCores=6
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 10} :: PASS","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"RayRSATPC","2025-01-28T23:47:07Z","Unsupported","Success","OS","PASS","PASS","PASS","FAIL","FAIL","PASS","Storage: OSDiskSize=232GB :: PASS","Memory: System_Memory=16GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=3408
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 9
+PlatformId 2} :: FAIL","SecureBoot: Not capable :: FAIL","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
+"RayTestPC","2025-01-28T23:47:16Z","Unsupported","Success","Proc fail","PASS","PASS","PASS","FAIL","PASS","PASS","Storage: OSDiskSize=476GB :: PASS","Memory: System_Memory=16GB :: PASS","TPM: TPMVersion=2.0, 0, 1.16 :: PASS","Processor: {AddressWidth=64
+MaxClockSpeed=2712
+NumberOfLogicalCores=4
+Manufacturer=GenuineIntel
+Caption=Intel64 Family 6 Model 158 Stepping 9
+PlatformId 2} :: FAIL","SecureBoot: Capable :: PASS","OsVersion: version=Microsoft Windows 10 Pro -  :: PASS"
