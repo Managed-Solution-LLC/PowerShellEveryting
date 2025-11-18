@@ -3,8 +3,8 @@ Connect-ExchangeOnline
 
 # Array of offboarded user emails
 $offboardedUsers = @(
-    "user1@ontoso.com",
-    "user2@ontoso.com",
+    "user1@contoso.com",
+    "user2@contoso.com",
     "user3@contoso.com"
 )
 
