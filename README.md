@@ -14,7 +14,8 @@ This repository contains a collection of PowerShell scripts and helpers for mana
 scripts/
 ├── Assessment/      # Comprehensive environment assessments
 │   ├── Lync/       # Lync/Skype for Business assessment tools
-│   ├── Office365/  # Office 365 tenant assessments (Cloud Shell optimized)
+│   ├── Microsoft365/  # Microsoft 365 assessment tools
+│   ├── Office365/  # Office 365 tenant assessments (legacy location)
 │   ├── Security/   # Security posture assessments
 │   └── Teams/      # Teams infrastructure assessments
 ├── Azure/           # Azure and Microsoft 365 automation scripts
@@ -22,9 +23,16 @@ scripts/
 ├── Graph Commands/  # Microsoft Graph API scripts
 ├── Intune/          # Intune management scripts
 │   └── Assessment/  # Intune assessment scripts
-├── Office365/       # Office 365 scripts
+├── Office365/       # Office 365 user/mailbox management
+├── Data Processing/ # Data analysis and reporting tools
+└── Security/        # Security-related scripts and CVE fixes
 build/               # Build and helper scripts
 docs/                # Project documentation and guides
+├── wiki/            # Detailed script documentation
+│   └── Assessments/ # Assessment script documentation
+│       ├── Lync/    # Lync/Skype documentation
+│       └── Microsoft365/ # M365 assessment documentation
+└── *.md             # General guides and project docs
 ```
 
 ## Getting Started
@@ -47,11 +55,34 @@ docs/                # Project documentation and guides
 - `scripts/Azure/Backup-MgGraphBitLockerKeys.ps1` – Backup BitLocker recovery keys from Microsoft Graph
 
 ### Lync/Skype for Business
-- `scripts/Assessment/Lync/Start-LyncCsvExporter.ps1` – Interactive menu-based Lync data exporter
-- `scripts/Assessment/Lync/Get-ComprehensiveLyncReport.ps1` – Complete Lync environment assessment
+- `scripts/Assessment/Lync/Start-LyncCsvExporter.ps1` – Interactive menu-based Lync data exporter ([docs](docs/wiki/Assessments/Lync/Start-LyncCsvExporter.md))
+- `scripts/Assessment/Lync/Get-ComprehensiveLyncReport.ps1` – Complete Lync environment assessment ([docs](docs/wiki/Assessments/Lync/Get-ComprehensiveLyncReport.md))
+- `scripts/Assessment/Lync/Get-LyncHealthReport.ps1` – Health monitoring and diagnostics ([docs](docs/wiki/Assessments/Lync/Get-LyncHealthReport.md))
+- `scripts/Assessment/Lync/Export-ADLyncTeamsMigrationData.ps1` – AD export for Teams migration ([docs](docs/wiki/Assessments/Lync/Export-ADLyncTeamsMigrationData.md))
+- See [Lync Assessment Scripts Overview](docs/wiki/Assessments/Lync/README.md) for complete documentation
 
 ### Microsoft Teams
 - `scripts/Assessment/Teams/Get-ComprehensiveTeamsReport.ps1` – Full Teams infrastructure assessment
+
+## Documentation
+
+### Wiki Documentation
+Detailed documentation for scripts is available in the `docs/wiki/` directory:
+- **[Lync Assessment Scripts](docs/wiki/Assessments/Lync/README.md)** - Complete Lync/Skype for Business assessment suite
+- **[Microsoft 365 Assessment Scripts](docs/wiki/Assessments/Microsoft365/)** - M365 tenant assessment tools
+- **[Office 365 Quick Start Guide](docs/Office365-Quick-Start.md)** - Getting started with O365 assessments
+
+### Script Documentation
+Each script includes:
+- Comprehensive comment-based help (`.SYNOPSIS`, `.DESCRIPTION`, `.PARAMETER`, `.EXAMPLE`, `.NOTES`)
+- Usage examples and parameter descriptions
+- Prerequisites and required modules
+- Output format and file naming conventions
+
+For detailed script documentation, see the wiki articles linked above or use PowerShell's built-in help:
+```powershell
+Get-Help .\ScriptName.ps1 -Full
+```
 
 ## Build and Testing
 - The `build/` folder contains helper scripts for automation and validation.

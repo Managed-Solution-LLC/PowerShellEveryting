@@ -673,19 +673,28 @@ Install-Module ModuleName -Scope CurrentUser
 2. **Move from `.prep/`**: When promoting script to public folder, validate it's client-agnostic
 3. **Testing Complete**: After production testing and approval
 4. **Create Wiki Doc**: Create markdown file in `docs/wiki/<CategoryPath>/`
-5. **Update README**: Add entry to main README.md if new capability
-6. **Update Category Guides**: Update relevant `docs/*.md` guides if applicable
+5. **Update/Create Folder README**: Update or create `README.md` in script's folder (e.g., `scripts/Assessment/Lync/README.md`) that:
+   - Lists all scripts in the folder with brief descriptions
+   - Links to wiki documentation for each script
+   - Provides quick start examples
+   - Documents common prerequisites
+   - Includes troubleshooting tips
+6. **Update Root README**: Add entry to main `README.md` if new capability or major script
+7. **Update Category Guides**: Update relevant `docs/*.md` guides if applicable
 
 ### Documentation Validation Checklist
 Before considering script documentation complete:
 - [ ] Comment-based help includes all sections (SYNOPSIS, DESCRIPTION, PARAMETERS, EXAMPLES, NOTES, LINK)
 - [ ] Real dates used throughout (no placeholders)
 - [ ] All examples use generic organization names
-- [ ] Wiki documentation created in correct location
+- [ ] Wiki documentation created in correct location (`docs/wiki/<CategoryPath>/<ScriptName>.md`)
+- [ ] Folder-level README.md updated or created in script's directory
+- [ ] Folder README links to wiki articles for all scripts
 - [ ] Prerequisites clearly documented with versions
 - [ ] Output formats and file naming explained
 - [ ] Common troubleshooting scenarios included
 - [ ] Related scripts cross-referenced
+- [ ] Root README.md updated if new capability or featured script
 
 ## Current Development Focus
 Based on folder structure and recent changes:
