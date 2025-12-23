@@ -2,18 +2,28 @@
 
 Welcome to the PowerShellEveryting documentation wiki. This enterprise PowerShell toolkit provides production-ready scripts for Microsoft 365, Azure AD, Teams, Lync/Skype for Business, and Intune management.
 
-## 📚 Documentation
+## 📚 Documentation Categories
 
-### Assessment Tools
-- **[Lync Assessment Scripts](Lync-Assessment-Scripts)** - Comprehensive Lync/Skype for Business assessment and migration tools
-- **[Teams Assessment Scripts](Teams-Assessment-Scripts)** - Teams infrastructure and configuration assessment
-- **[Office 365 Assessment Scripts](Office365-Assessment-Scripts)** - Office 365 tenant assessments and reporting
-  - [Get-QuickO365Report.ps1](Assessments/Microsoft365/Get-QuickO365Report) - Complete O365 assessment with Excel output
-  - [Get-MailboxPermissionsReport.ps1](Assessments/Microsoft365/Get-MailboxPermissionsReport) - Mailbox delegation and permissions audit
+### 🎯 Lync/Skype for Business Assessments
+**[Lync Assessment Scripts Overview →](Assessments/Lync/README)**
 
-### Development Resources
-- **[Code Standards](Code-Standards)** - PowerShell coding standards and best practices
-- **[Graph Commands](Graph-Commands)** - Microsoft Graph API helpers and utilities
+Complete suite of Lync/Skype for Business assessment and migration tools:
+- **[Start-LyncCsvExporter](Assessments/Lync/Start-LyncCsvExporter)** - Interactive menu-driven CSV export tool
+- **[Get-ComprehensiveLyncReport](Assessments/Lync/Get-ComprehensiveLyncReport)** - Complete environment assessment with recommendations
+- **[Get-LyncHealthReport](Assessments/Lync/Get-LyncHealthReport)** - Health monitoring and diagnostics
+- **[Get-LyncInfrastructureReport](Assessments/Lync/Get-LyncInfrastructureReport)** - Infrastructure configuration analysis
+- **[Get-LyncServiceStatus](Assessments/Lync/Get-LyncServiceStatus)** - Service status and performance monitoring
+- **[Get-LyncUserRegistrationReport](Assessments/Lync/Get-LyncUserRegistrationReport)** - User registration and activity tracking
+- **[Export-ADLyncTeamsMigrationData](Assessments/Lync/Export-ADLyncTeamsMigrationData)** - AD export for Teams migration
+
+### 📊 Microsoft 365 Assessments
+Office 365 tenant assessment and reporting tools:
+- **[Get-QuickO365Report](Assessments/Microsoft365/Get-QuickO365Report)** - Complete O365 assessment with Excel output
+- **[Get-MailboxPermissionsReport](Assessments/Microsoft365/Get-MailboxPermissionsReport)** - Mailbox delegation and permissions audit
+
+### 🔧 Development Resources
+- **Code Standards** - PowerShell coding standards and best practices _(coming soon)_
+- **Graph Commands** - Microsoft Graph API helpers and utilities _(documentation pending)_
 
 ## 🎯 Featured Scripts
 
