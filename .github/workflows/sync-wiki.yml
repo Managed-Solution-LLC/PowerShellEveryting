@@ -1,0 +1,26 @@
+name: Sync Wiki
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'docs/wiki/**'
+  workflow_dispatch:
+
+jobs:
+  sync-wiki:
+    runs-on: ubuntu-latest
+    name: Sync Documentation to Wiki
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Sync to Wiki
+        uses: Andrew-Chen-Wang/github-wiki-action@v4
+        with:
+          path: docs/wiki
+          token: ${{ secrets.GITHUB_TOKEN }}
