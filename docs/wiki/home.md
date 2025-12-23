@@ -17,9 +17,12 @@ Complete suite of Lync/Skype for Business assessment and migration tools:
 - **[Export-ADLyncTeamsMigrationData](Assessments/Lync/Export-ADLyncTeamsMigrationData)** - AD export for Teams migration
 
 ### 📊 Microsoft 365 Assessments
+**[Microsoft 365 Assessment Scripts Overview →](Assessments/Microsoft365/README)**
+
 Office 365 tenant assessment and reporting tools:
 - **[Get-QuickO365Report](Assessments/Microsoft365/Get-QuickO365Report)** - Complete O365 assessment with Excel output
 - **[Get-MailboxPermissionsReport](Assessments/Microsoft365/Get-MailboxPermissionsReport)** - Mailbox delegation and permissions audit
+- **[Get-MailboxRules](Assessments/Microsoft365/Get-MailboxRules)** - Export mailbox rules (forwarding, redirects, auto-replies)
 
 ### 🔧 Development Resources
 - **Code Standards** - PowerShell coding standards and best practices _(coming soon)_
@@ -46,6 +49,20 @@ Comprehensive mailbox delegation audit for Full Access, Send As, Send on Behalf,
 ```
 
 [View Documentation →](Assessments/Microsoft365/Get-MailboxPermissionsReport)
+
+### Get-MailboxRules.ps1
+Export and audit mailbox rules (inbox rules) to identify forwarding rules, auto-replies, folder moves, and automated actions. Essential for security audits and compliance.
+
+**Quick Start:**
+```powershell
+# All users
+.\Get-MailboxRules.ps1
+
+# Specific user
+.\Get-MailboxRules.ps1 -UserPrincipalName "user@contoso.com"
+```
+
+[View Documentation →](Assessments/Microsoft365/Get-MailboxRules)
 
 ## 🚀 Quick Start
 
