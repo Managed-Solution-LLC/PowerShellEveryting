@@ -12,6 +12,11 @@ This repository contains a collection of PowerShell scripts and helpers for mana
 ## Folder Structure
 ```
 scripts/
+├── Assessment/      # Comprehensive environment assessments
+│   ├── Lync/       # Lync/Skype for Business assessment tools
+│   ├── Office365/  # Office 365 tenant assessments (Cloud Shell optimized)
+│   ├── Security/   # Security posture assessments
+│   └── Teams/      # Teams infrastructure assessments
 ├── Azure/           # Azure and Microsoft 365 automation scripts
 ├── Defender/        # Microsoft Defender scripts
 ├── Graph Commands/  # Microsoft Graph API scripts
@@ -19,6 +24,7 @@ scripts/
 │   └── Assessment/  # Intune assessment scripts
 ├── Office365/       # Office 365 scripts
 build/               # Build and helper scripts
+docs/                # Project documentation and guides
 ```
 
 ## Getting Started
@@ -28,10 +34,24 @@ build/               # Build and helper scripts
 4. **Run scripts** in PowerShell 7+ or Windows PowerShell 5.1, as appropriate.
 5. **Customize and extend** scripts as needed for your environment.
 
-## Example Scripts
+## Featured Scripts
+
+### Office 365 Assessments (Cloud Shell Ready) 🚀
+- `scripts/Assessment/Office365/Get-QuickO365Report.ps1` – Fast Office 365 tenant assessment with automatic ZIP download
+- `scripts/Assessment/Office365/Get-ComprehensiveO365Report.ps1` – Advanced assessment with archives, rules, and full analytics
+- See [Office 365 Assessment Guide](docs/Office365-Assessment-Guide.md) for complete documentation
+
+### Azure & Graph API
 - `scripts/Azure/Get-CloudOnlyUsers.ps1` – Export all cloud-only users, groups, and distribution groups
 - `scripts/Azure/AzCopyCommand.ps1` – Archive files to Azure Blob Storage using AzCopy
 - `scripts/Azure/Backup-MgGraphBitLockerKeys.ps1` – Backup BitLocker recovery keys from Microsoft Graph
+
+### Lync/Skype for Business
+- `scripts/Assessment/Lync/Start-LyncCsvExporter.ps1` – Interactive menu-based Lync data exporter
+- `scripts/Assessment/Lync/Get-ComprehensiveLyncReport.ps1` – Complete Lync environment assessment
+
+### Microsoft Teams
+- `scripts/Assessment/Teams/Get-ComprehensiveTeamsReport.ps1` – Full Teams infrastructure assessment
 
 ## Build and Testing
 - The `build/` folder contains helper scripts for automation and validation.
