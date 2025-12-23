@@ -23,6 +23,7 @@
 - [Get-QuickO365Report](Assessments-Microsoft365-Get-QuickO365Report)
 - [Get-MailboxPermissionsReport](Assessments-Microsoft365-Get-MailboxPermissionsReport)
 - [Get-MailboxRules](Assessments-Microsoft365-Get-MailboxRules)
+- [Get-MigrationWizLicensing](Assessments-Microsoft365-Get-MigrationWizLicensing)
 
 ### Teams
 - Teams Assessment Scripts _(coming soon)_

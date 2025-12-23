@@ -23,6 +23,7 @@ Office 365 tenant assessment and reporting tools:
 - **[Get-QuickO365Report](Assessments-Microsoft365-Get-QuickO365Report)** - Complete O365 assessment with Excel output
 - **[Get-MailboxPermissionsReport](Assessments-Microsoft365-Get-MailboxPermissionsReport)** - Mailbox delegation and permissions audit
 - **[Get-MailboxRules](Assessments-Microsoft365-Get-MailboxRules)** - Export mailbox rules (forwarding, redirects, auto-replies)
+- **[Get-MigrationWizLicensing](Assessments-Microsoft365-Get-MigrationWizLicensing)** - BitTitan MigrationWiz license calculator
 
 ### 🔧 Development Resources
 - **Code Standards** - PowerShell coding standards and best practices _(coming soon)_

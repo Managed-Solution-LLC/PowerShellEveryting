@@ -56,6 +56,33 @@ Generates a comprehensive snapshot report of Office 365/Microsoft 365 tenant con
 
 ---
 
+### [Get-MigrationWizLicensing.ps1](../../docs/wiki/Assessments-Microsoft365-Get-MigrationWizLicensing.md)
+Calculates BitTitan MigrationWiz license requirements and costs based on Microsoft 365 assessment data.
+
+**Quick Start:**
+```powershell
+.\Get-MigrationWizLicensing.ps1 `
+    -InputExcelFile "C:\Assessments\O365_Assessment.xlsx" `
+    -UseUserMigrationBundle `
+    -IncludeTeams `
+    -IncludeSharePoint
+```
+
+**Use Cases:**
+- Pre-migration cost estimation
+- License optimization and cost savings
+- Migration planning and budgeting
+- Accurate resource scoping
+
+**Features:**
+- Smart filtering (excludes empty mailboxes, Teams sites, SharePoint libraries)
+- Tiered SharePoint pricing (50GB vs 100GB)
+- Shared vs user mailbox separation
+- Teams site data validation
+- Professional cost breakdown reports
+
+---
+
 ## 🚀 Prerequisites
 
 ### PowerShell Requirements
