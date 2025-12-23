@@ -8,9 +8,9 @@ on:
       - 'docs/wiki/**'
   workflow_dispatch:
 
-Permissions:
+permissions:
   contents: write
-  
+
 jobs:
   sync-wiki:
     runs-on: ubuntu-latest
