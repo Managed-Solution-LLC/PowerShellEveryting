@@ -4,7 +4,7 @@ Comprehensive PowerShell scripts for assessing and auditing Microsoft 365 enviro
 
 ## 📁 Scripts in this Directory
 
-### [Get-MailboxPermissionsReport.ps1](../../docs/wiki/Assessments/Microsoft365/Get-MailboxPermissionsReport.md)
+### [Get-MailboxPermissionsReport.ps1](../../docs/wiki/Assessments-Microsoft365-Get-MailboxPermissionsReport.md)
 Exports mailbox delegation permissions including SendAs, SendOnBehalf, and FullAccess rights across all mailboxes.
 
 **Quick Start:**
@@ -20,7 +20,7 @@ Exports mailbox delegation permissions including SendAs, SendOnBehalf, and FullA
 
 ---
 
-### [Get-MailboxRules.ps1](../../docs/wiki/Assessments/Microsoft365/Get-MailboxRules.md)
+### [Get-MailboxRules.ps1](../../docs/wiki/Assessments-Microsoft365-Get-MailboxRules.md)
 Retrieves and exports mailbox rules (inbox rules) for all users or specific users, including forwarding rules, auto-replies, and folder moves.
 
 **Quick Start:**
@@ -40,7 +40,7 @@ Retrieves and exports mailbox rules (inbox rules) for all users or specific user
 
 ---
 
-### [Get-QuickO365Report.ps1](../../docs/wiki/Assessments/Microsoft365/Get-QuickO365Report.md)
+### [Get-QuickO365Report.ps1](../../docs/wiki/Assessments-Microsoft365-Get-QuickO365Report.md)
 Generates a comprehensive snapshot report of Office 365/Microsoft 365 tenant configuration and usage.
 
 **Quick Start:**
@@ -258,7 +258,7 @@ All scripts follow consistent output patterns:
 ## 🔗 Related Resources
 
 ### Internal Documentation
-- [Assessment Scripts Overview](../../docs/wiki/Assessments/README.md)
+- [Assessment Scripts Overview](../../docs/wiki/Assessments-README.md)
 - [Office365 Quick Start Guide](../../docs/Office365-Quick-Start.md)
 - [Office365 Project Summary](../../docs/Office365-Project-Summary.md)
 

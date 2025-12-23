@@ -5,24 +5,24 @@ Welcome to the PowerShellEveryting documentation wiki. This enterprise PowerShel
 ## 📚 Documentation Categories
 
 ### 🎯 Lync/Skype for Business Assessments
-**[Lync Assessment Scripts Overview →](Assessments/Lync/README)**
+**[Lync Assessment Scripts Overview →](Assessments-Lync-README)**
 
 Complete suite of Lync/Skype for Business assessment and migration tools:
-- **[Start-LyncCsvExporter](Assessments/Lync/Start-LyncCsvExporter)** - Interactive menu-driven CSV export tool
-- **[Get-ComprehensiveLyncReport](Assessments/Lync/Get-ComprehensiveLyncReport)** - Complete environment assessment with recommendations
-- **[Get-LyncHealthReport](Assessments/Lync/Get-LyncHealthReport)** - Health monitoring and diagnostics
-- **[Get-LyncInfrastructureReport](Assessments/Lync/Get-LyncInfrastructureReport)** - Infrastructure configuration analysis
-- **[Get-LyncServiceStatus](Assessments/Lync/Get-LyncServiceStatus)** - Service status and performance monitoring
-- **[Get-LyncUserRegistrationReport](Assessments/Lync/Get-LyncUserRegistrationReport)** - User registration and activity tracking
-- **[Export-ADLyncTeamsMigrationData](Assessments/Lync/Export-ADLyncTeamsMigrationData)** - AD export for Teams migration
+- **[Start-LyncCsvExporter](Assessments-Lync-Start-LyncCsvExporter)** - Interactive menu-driven CSV export tool
+- **[Get-ComprehensiveLyncReport](Assessments-Lync-Get-ComprehensiveLyncReport)** - Complete environment assessment with recommendations
+- **[Get-LyncHealthReport](Assessments-Lync-Get-LyncHealthReport)** - Health monitoring and diagnostics
+- **[Get-LyncInfrastructureReport](Assessments-Lync-Get-LyncInfrastructureReport)** - Infrastructure configuration analysis
+- **[Get-LyncServiceStatus](Assessments-Lync-Get-LyncServiceStatus)** - Service status and performance monitoring
+- **[Get-LyncUserRegistrationReport](Assessments-Lync-Get-LyncUserRegistrationReport)** - User registration and activity tracking
+- **[Export-ADLyncTeamsMigrationData](Assessments-Lync-Export-ADLyncTeamsMigrationData)** - AD export for Teams migration
 
 ### 📊 Microsoft 365 Assessments
-**[Microsoft 365 Assessment Scripts Overview →](Assessments/Microsoft365/README)**
+**[Microsoft 365 Assessment Scripts Overview →](Assessments-Microsoft365-README)**
 
 Office 365 tenant assessment and reporting tools:
-- **[Get-QuickO365Report](Assessments/Microsoft365/Get-QuickO365Report)** - Complete O365 assessment with Excel output
-- **[Get-MailboxPermissionsReport](Assessments/Microsoft365/Get-MailboxPermissionsReport)** - Mailbox delegation and permissions audit
-- **[Get-MailboxRules](Assessments/Microsoft365/Get-MailboxRules)** - Export mailbox rules (forwarding, redirects, auto-replies)
+- **[Get-QuickO365Report](Assessments-Microsoft365-Get-QuickO365Report)** - Complete O365 assessment with Excel output
+- **[Get-MailboxPermissionsReport](Assessments-Microsoft365-Get-MailboxPermissionsReport)** - Mailbox delegation and permissions audit
+- **[Get-MailboxRules](Assessments-Microsoft365-Get-MailboxRules)** - Export mailbox rules (forwarding, redirects, auto-replies)
 
 ### 🔧 Development Resources
 - **Code Standards** - PowerShell coding standards and best practices _(coming soon)_
@@ -38,7 +38,7 @@ Complete Office 365 tenant assessment collecting mailboxes, licenses, OneDrive, 
 .\Get-QuickO365Report.ps1 -TenantDomain "contoso"
 ```
 
-[View Documentation →](Assessments/Microsoft365/Get-QuickO365Report)
+[View Documentation →](Assessments-Microsoft365-Get-QuickO365Report)
 
 ### Get-MailboxPermissionsReport.ps1
 Comprehensive mailbox delegation audit for Full Access, Send As, Send on Behalf, and folder-level permissions.
@@ -48,7 +48,7 @@ Comprehensive mailbox delegation audit for Full Access, Send As, Send on Behalf,
 .\Get-MailboxPermissionsReport.ps1 -MailboxFilter SharedMailboxes
 ```
 
-[View Documentation →](Assessments/Microsoft365/Get-MailboxPermissionsReport)
+[View Documentation →](Assessments-Microsoft365-Get-MailboxPermissionsReport)
 
 ### Get-MailboxRules.ps1
 Export and audit mailbox rules (inbox rules) to identify forwarding rules, auto-replies, folder moves, and automated actions. Essential for security audits and compliance.
@@ -62,7 +62,7 @@ Export and audit mailbox rules (inbox rules) to identify forwarding rules, auto-
 .\Get-MailboxRules.ps1 -UserPrincipalName "user@contoso.com"
 ```
 
-[View Documentation →](Assessments/Microsoft365/Get-MailboxRules)
+[View Documentation →](Assessments-Microsoft365-Get-MailboxRules)
 
 ## 🚀 Quick Start
 
