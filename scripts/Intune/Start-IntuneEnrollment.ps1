@@ -56,6 +56,28 @@
     
     Enrolls device with custom log location and prevents automatic restart.
 
+.EXAMPLE
+    iex "& {$(irm https://raw.githubusercontent.com/Managed-Solution-LLC/PowerShellEveryting/main/scripts/Intune/Start-IntuneEnrollment.ps1)}"
+    
+    Run directly from GitHub - basic enrollment (no parameters).
+
+.EXAMPLE
+    Invoke-Expression "& {$(Invoke-RestMethod https://raw.githubusercontent.com/Managed-Solution-LLC/PowerShellEveryting/main/scripts/Intune/Start-IntuneEnrollment.ps1)} -ForceReenroll -SyncAfterEnroll"
+    
+    Run from GitHub with parameters - force re-enrollment and sync.
+
+.EXAMPLE
+    $url = "https://raw.githubusercontent.com/Managed-Solution-LLC/PowerShellEveryting/main/scripts/Intune/Start-IntuneEnrollment.ps1"
+    Invoke-Expression "& {$(Invoke-RestMethod $url)} -SyncAfterEnroll -WaitForSync -NoRestart"
+    
+    Run from GitHub with multiple parameters.
+
+.EXAMPLE
+    $script = Invoke-RestMethod https://raw.githubusercontent.com/Managed-Solution-LLC/PowerShellEveryting/main/scripts/Intune/Start-IntuneEnrollment.ps1
+    Invoke-Expression $script
+    
+    Download script to variable first, then execute (useful for inspection or repeated runs).
+
 .NOTES
     Author: W. Ford
     Company: Managed Solution LLC
@@ -191,10 +213,19 @@ function Test-EntraJoined {
 function Get-IntuneEnrollmentStatus {
     <#
     .SYNOPSIS
-        Checks current Intune enrollment status
+        Checks current Intune enrollment status using multiple detection methods
     #>
     try {
-        # Check registry for MDM enrollment
+        $enrollmentFound = $false
+        $enrollmentInfo = @{
+            IsEnrolled = $false
+            EnrollmentGUID = $null
+            UPN = $null
+            ServiceURL = $null
+            DetectionMethod = $null
+        }
+        
+        # Method 1: Check primary enrollment registry path
         $enrollmentPath = "HKLM:\SOFTWARE\Microsoft\Enrollments"
         
         if (Test-Path $enrollmentPath) {
@@ -203,32 +234,82 @@ function Get-IntuneEnrollmentStatus {
             foreach ($enrollment in $enrollments) {
                 $providerID = Get-ItemProperty -Path $enrollment.PSPath -Name "ProviderID" -ErrorAction SilentlyContinue
                 
-                if ($providerID.ProviderID -eq "MS DM Server") {
+                # Check for various Intune provider identifiers
+                if ($providerID.ProviderID -in @("MS DM Server", "Intune", "Microsoft Intune")) {
                     $upn = Get-ItemProperty -Path $enrollment.PSPath -Name "UPN" -ErrorAction SilentlyContinue
                     $discoveryServiceFullURL = Get-ItemProperty -Path $enrollment.PSPath -Name "DiscoveryServiceFullURL" -ErrorAction SilentlyContinue
+                    $enrollmentState = Get-ItemProperty -Path $enrollment.PSPath -Name "EnrollmentState" -ErrorAction SilentlyContinue
                     
-                    Write-Log "Device is enrolled in Intune" -Level Success
-                    Write-Log "  Enrollment GUID: $($enrollment.PSChildName)" -Level Info
-                    if ($upn) { Write-Log "  UPN: $($upn.UPN)" -Level Info }
-                    if ($discoveryServiceFullURL) { Write-Log "  Service URL: $($discoveryServiceFullURL.DiscoveryServiceFullURL)" -Level Info }
-                    
-                    return @{
-                        IsEnrolled = $true
-                        EnrollmentGUID = $enrollment.PSChildName
-                        UPN = $upn.UPN
-                        ServiceURL = $discoveryServiceFullURL.DiscoveryServiceFullURL
+                    # Check if enrollment is active (state 1 = enrolled)
+                    if ($null -eq $enrollmentState -or $enrollmentState.EnrollmentState -eq 1) {
+                        $enrollmentFound = $true
+                        $enrollmentInfo = @{
+                            IsEnrolled = $true
+                            EnrollmentGUID = $enrollment.PSChildName
+                            UPN = $upn.UPN
+                            ServiceURL = $discoveryServiceFullURL.DiscoveryServiceFullURL
+                            DetectionMethod = "Registry-Enrollments"
+                        }
+                        break
                     }
                 }
             }
         }
         
-        Write-Log "Device is NOT enrolled in Intune" -Level Warning
-        return @{
-            IsEnrolled = $false
-            EnrollmentGUID = $null
-            UPN = $null
-            ServiceURL = $null
+        # Method 2: Check PolicyManager for MDM enrollment
+        if (-not $enrollmentFound) {
+            $mdmPath = "HKLM:\SOFTWARE\Microsoft\Provisioning\OMADM\Accounts"
+            if (Test-Path $mdmPath) {
+                $accounts = Get-ChildItem -Path $mdmPath -ErrorAction SilentlyContinue
+                foreach ($account in $accounts) {
+                    $serverUrl = Get-ItemProperty -Path $account.PSPath -Name "ServerUrl" -ErrorAction SilentlyContinue
+                    if ($serverUrl.ServerUrl -like "*manage.microsoft.com*" -or $serverUrl.ServerUrl -like "*intune*") {
+                        $enrollmentFound = $true
+                        $enrollmentInfo = @{
+                            IsEnrolled = $true
+                            EnrollmentGUID = $account.PSChildName
+                            UPN = $null
+                            ServiceURL = $serverUrl.ServerUrl
+                            DetectionMethod = "Registry-OMADM"
+                        }
+                        break
+                    }
+                }
+            }
         }
+        
+        # Method 3: Check using dsregcmd for MDM enrollment
+        if (-not $enrollmentFound) {
+            $dsregStatus = & dsregcmd /status
+            if ($dsregStatus -match "MdmUrl\s*:\s*https://.*manage.*microsoft\.com" -or 
+                $dsregStatus -match "MDMEnrolled\s*:\s*YES") {
+                $enrollmentFound = $true
+                $mdmUrl = ($dsregStatus | Select-String "MdmUrl\s*:\s*(.+)").Matches.Groups[1].Value.Trim()
+                $enrollmentInfo = @{
+                    IsEnrolled = $true
+                    EnrollmentGUID = "Unknown"
+                    UPN = $null
+                    ServiceURL = $mdmUrl
+                    DetectionMethod = "dsregcmd"
+                }
+            }
+        }
+        
+        # Report findings
+        if ($enrollmentInfo.IsEnrolled) {
+            Write-Log "Device is enrolled in Intune" -Level Success
+            Write-Log "  Detection Method: $($enrollmentInfo.DetectionMethod)" -Level Info
+            if ($enrollmentInfo.EnrollmentGUID -ne "Unknown") {
+                Write-Log "  Enrollment GUID: $($enrollmentInfo.EnrollmentGUID)" -Level Info
+            }
+            if ($enrollmentInfo.UPN) { Write-Log "  UPN: $($enrollmentInfo.UPN)" -Level Info }
+            if ($enrollmentInfo.ServiceURL) { Write-Log "  Service URL: $($enrollmentInfo.ServiceURL)" -Level Info }
+        }
+        else {
+            Write-Log "Device is NOT enrolled in Intune" -Level Warning
+        }
+        
+        return $enrollmentInfo
     }
     catch {
         Write-Log "Failed to check enrollment status: $($_.Exception.Message)" -Level Error
@@ -237,6 +318,7 @@ function Get-IntuneEnrollmentStatus {
             EnrollmentGUID = $null
             UPN = $null
             ServiceURL = $null
+            DetectionMethod = $null
         }
     }
 }
