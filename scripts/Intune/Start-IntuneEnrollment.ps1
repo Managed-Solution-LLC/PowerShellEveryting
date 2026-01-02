@@ -216,6 +216,7 @@ function Get-IntuneEnrollmentStatus {
         Checks current Intune enrollment status using multiple detection methods
     #>
     try {
+        Write-Verbose "=== Starting Intune Enrollment Detection ===" -Verbose
         $enrollmentFound = $false
         $enrollmentInfo = @{
             IsEnrolled = $false
@@ -226,19 +227,27 @@ function Get-IntuneEnrollmentStatus {
         }
         
         # Method 1: Check primary enrollment registry path
+        Write-Verbose "Method 1: Checking HKLM:\SOFTWARE\Microsoft\Enrollments" -Verbose
         $enrollmentPath = "HKLM:\SOFTWARE\Microsoft\Enrollments"
         
         if (Test-Path $enrollmentPath) {
             $enrollments = Get-ChildItem -Path $enrollmentPath -ErrorAction SilentlyContinue
+            Write-Verbose "  Found $($enrollments.Count) enrollment entries" -Verbose
             
             foreach ($enrollment in $enrollments) {
+                Write-Verbose "  Checking enrollment: $($enrollment.PSChildName)" -Verbose
                 $providerID = Get-ItemProperty -Path $enrollment.PSPath -Name "ProviderID" -ErrorAction SilentlyContinue
+                Write-Verbose "    ProviderID: $($providerID.ProviderID)" -Verbose
                 
                 # Check for various Intune provider identifiers
                 if ($providerID.ProviderID -in @("MS DM Server", "Intune", "Microsoft Intune")) {
                     $upn = Get-ItemProperty -Path $enrollment.PSPath -Name "UPN" -ErrorAction SilentlyContinue
                     $discoveryServiceFullURL = Get-ItemProperty -Path $enrollment.PSPath -Name "DiscoveryServiceFullURL" -ErrorAction SilentlyContinue
                     $enrollmentState = Get-ItemProperty -Path $enrollment.PSPath -Name "EnrollmentState" -ErrorAction SilentlyContinue
+                    
+                    Write-Verbose "    UPN: $($upn.UPN)" -Verbose
+                    Write-Verbose "    Service URL: $($discoveryServiceFullURL.DiscoveryServiceFullURL)" -Verbose
+                    Write-Verbose "    Enrollment State: $($enrollmentState.EnrollmentState)" -Verbose
                     
                     # Check if enrollment is active (state 1 = enrolled)
                     if ($null -eq $enrollmentState -or $enrollmentState.EnrollmentState -eq 1) {
@@ -250,19 +259,16 @@ function Get-IntuneEnrollmentStatus {
                             ServiceURL = $discoveryServiceFullURL.DiscoveryServiceFullURL
                             DetectionMethod = "Registry-Enrollments"
                         }
-                        break
-                    }
-                }
-            }
-        }
-        
-        # Method 2: Check PolicyManager for MDM enrollment
-        if (-not $enrollmentFound) {
+                        Write-Verbose "  ✓ Active Intune enrollment found via Registry" -Verbose
+            Write-Verbose "Method 2: Checking HKLM:\SOFTWARE\Microsoft\Provisioning\OMADM\Accounts" -Verbose
             $mdmPath = "HKLM:\SOFTWARE\Microsoft\Provisioning\OMADM\Accounts"
             if (Test-Path $mdmPath) {
                 $accounts = Get-ChildItem -Path $mdmPath -ErrorAction SilentlyContinue
+                Write-Verbose "  Found $($accounts.Count) OMADM accounts" -Verbose
                 foreach ($account in $accounts) {
+                    Write-Verbose "  Checking account: $($account.PSChildName)" -Verbose
                     $serverUrl = Get-ItemProperty -Path $account.PSPath -Name "ServerUrl" -ErrorAction SilentlyContinue
+                    Write-Verbose "    Server URL: $($serverUrl.ServerUrl)" -Verbose
                     if ($serverUrl.ServerUrl -like "*manage.microsoft.com*" -or $serverUrl.ServerUrl -like "*intune*") {
                         $enrollmentFound = $true
                         $enrollmentInfo = @{
@@ -272,20 +278,62 @@ function Get-IntuneEnrollmentStatus {
                             ServiceURL = $serverUrl.ServerUrl
                             DetectionMethod = "Registry-OMADM"
                         }
+                        Write-Verbose "  ✓ Active Intune enrollment found via OMADM" -Verbose
                         break
                     }
                 }
             }
-        }
-        
-        # Method 3: Check using dsregcmd for MDM enrollment
-        if (-not $enrollmentFound) {
+            else {
+                Write-Verbose "  OMADM path does not exist" -Verbose   if ($serverUrl.ServerUrl -like "*manage.microsoft.com*" -or $serverUrl.ServerUrl -like "*intune*") {
+                        $enrollmentFound = $true
+                        $enrollmentInfo = @{
+                            IsEnrolled = $true
+                            EnrollmentGUID = $account.PSChildName
+                            UPN = $null
+                            ServiceURL = $serverUrl.ServerUrl
+                            DetectionMethod = "Registry-OMADM"
+                        }
+            Write-Verbose "Method 3: Checking dsregcmd /status output" -Verbose
             $dsregStatus = & dsregcmd /status
+            Write-Verbose "  Parsing dsregcmd output..." -Verbose
+            
+            # Try to extract MDM enrollment GUID from dsregcmd
+            $mdmEnrollmentGUID = $null
+            foreach ($line in $dsregStatus) {
+                if ($line -match "MdmEnrollmentUrl\s*:\s*(.+)") {
+                    Write-Verbose "  MdmEnrollmentUrl: $($matches[1])" -Verbose
+                }
+                if ($line -match "MdmUrl\s*:\s*(.+)") {
+                    Write-Verbose "  MdmUrl: $($matches[1])" -Verbose
+                }
+                if ($line -match "MDMEnrolled\s*:\s*(.+)") {
+                    Write-Verbose "  MDMEnrolled: $($matches[1])" -Verbose
+                }
+                if ($line -match "EnterpriseId\s*:\s*(.+)") {
+                    $mdmEnrollmentGUID = $matches[1].Trim()
+                    Write-Verbose "  EnterpriseId (potential GUID): $mdmEnrollmentGUID" -Verbose
+                }
+            }
+            
             if ($dsregStatus -match "MdmUrl\s*:\s*https://.*manage.*microsoft\.com" -or 
                 $dsregStatus -match "MDMEnrolled\s*:\s*YES") {
                 $enrollmentFound = $true
                 $mdmUrl = ($dsregStatus | Select-String "MdmUrl\s*:\s*(.+)").Matches.Groups[1].Value.Trim()
                 $enrollmentInfo = @{
+                    IsEnrolled = $true
+                    EnrollmentGUID = if ($mdmEnrollmentGUID) { $mdmEnrollmentGUID } else { "Unknown" }
+                    UPN = $null
+                    ServiceURL = $mdmUrl
+                    DetectionMethod = "dsregcmd"
+                }
+                Write-Verbose "  ✓ Active Intune enrollment found via dsregcmd" -Verbose
+            }
+            else {
+                Write-Verbose "  No MDM enrollment found in dsregcmd output" -Verbose
+            }
+        }
+        
+        Write-Verbose "=== Enrollment Detection Complete ===" -Verbose       $enrollmentInfo = @{
                     IsEnrolled = $true
                     EnrollmentGUID = "Unknown"
                     UPN = $null
@@ -334,114 +382,170 @@ function Remove-IntuneEnrollment {
     )
     
     try {
+        Write-Verbose "=== Starting Intune Unenrollment Process ===" -Verbose
         Write-Log "Attempting to unenroll device from Intune..." -Level Info
         $removalSuccess = $false
         
         # Method 1: Remove specific enrollment if GUID is known
         if ($EnrollmentGUID -and $EnrollmentGUID -ne "Unknown") {
+            Write-Verbose "Method 1: Removing specific enrollment GUID: $EnrollmentGUID" -Verbose
             Write-Log "Removing enrollment GUID: $EnrollmentGUID" -Level Info
             
             # Remove enrollment registry keys
             $enrollmentPath = "HKLM:\SOFTWARE\Microsoft\Enrollments\$EnrollmentGUID"
+            Write-Verbose "  Checking path: $enrollmentPath" -Verbose
             if (Test-Path $enrollmentPath) {
+                Write-Verbose "  Path exists, removing..." -Verbose
                 Remove-Item -Path $enrollmentPath -Recurse -Force -ErrorAction Stop
                 Write-Log "Removed enrollment registry keys for $EnrollmentGUID" -Level Success
                 $removalSuccess = $true
             }
+            else {
+                Write-Verbose "  Path does not exist" -Verbose
+            }
             
             # Clean up enrollment tasks
             $taskName = "*$EnrollmentGUID*"
+            Write-Verbose "  Searching for tasks matching: $taskName" -Verbose
             $tasks = Get-ScheduledTask -TaskName $taskName -ErrorAction SilentlyContinue
+            Write-Verbose "  Found $($tasks.Count) matching tasks" -Verbose
             foreach ($task in $tasks) {
+                Write-Verbose "    Removing task: $($task.TaskName)" -Verbose
                 Unregister-ScheduledTask -TaskName $task.TaskName -Confirm:$false -ErrorAction SilentlyContinue
                 Write-Log "Removed scheduled task: $($task.TaskName)" -Level Info
             }
         }
+        else {
+            Write-Verbose "Method 1: Skipped (no specific GUID provided)" -Verbose
+        }
         
         # Method 2: Remove all Intune enrollments from registry
+        Write-Verbose "Method 2: Scanning for ALL Intune enrollments" -Verbose
         Write-Log "Scanning for all Intune enrollments..." -Level Info
         $enrollmentBasePath = "HKLM:\SOFTWARE\Microsoft\Enrollments"
         
         if (Test-Path $enrollmentBasePath) {
             $allEnrollments = Get-ChildItem -Path $enrollmentBasePath -ErrorAction SilentlyContinue
+            Write-Verbose "  Found $($allEnrollments.Count) total enrollment entries" -Verbose
             
             foreach ($enrollment in $allEnrollments) {
+                Write-Verbose "  Checking enrollment: $($enrollment.PSChildName)" -Verbose
                 $providerID = Get-ItemProperty -Path $enrollment.PSPath -Name "ProviderID" -ErrorAction SilentlyContinue
+                Write-Verbose "    ProviderID: $($providerID.ProviderID)" -Verbose
                 
                 if ($providerID.ProviderID -in @("MS DM Server", "Intune", "Microsoft Intune")) {
+                    Write-Verbose "    ✓ This is an Intune enrollment, removing..." -Verbose
                     Write-Log "Found Intune enrollment: $($enrollment.PSChildName)" -Level Info
                     
                     try {
                         Remove-Item -Path $enrollment.PSPath -Recurse -Force -ErrorAction Stop
                         Write-Log "Removed enrollment: $($enrollment.PSChildName)" -Level Success
+                        Write-Verbose "    Successfully removed" -Verbose
                         $removalSuccess = $true
                         
                         # Remove associated scheduled tasks
                         $taskPattern = "*$($enrollment.PSChildName)*"
+                        Write-Verbose "    Searching for tasks: $taskPattern" -Verbose
                         $relatedTasks = Get-ScheduledTask -TaskName $taskPattern -ErrorAction SilentlyContinue
+                        Write-Verbose "    Found $($relatedTasks.Count) related tasks" -Verbose
                         foreach ($task in $relatedTasks) {
+                            Write-Verbose "      Removing task: $($task.TaskName)" -Verbose
                             Unregister-ScheduledTask -TaskName $task.TaskName -Confirm:$false -ErrorAction SilentlyContinue
                             Write-Log "Removed task: $($task.TaskName)" -Level Info
                         }
                     }
                     catch {
+                        Write-Verbose "    Failed to remove: $($_.Exception.Message)" -Verbose
                         Write-Log "Failed to remove enrollment $($enrollment.PSChildName): $($_.Exception.Message)" -Level Warning
                     }
                 }
-            }
-        }
-        
-        # Method 3: Clean up OMADM accounts
-        $omadmPath = "HKLM:\SOFTWARE\Microsoft\Provisioning\OMADM\Accounts"
-        if (Test-Path $omadmPath) {
-            $accounts = Get-ChildItem -Path $omadmPath -ErrorAction SilentlyContinue
-            foreach ($account in $accounts) {
-                $serverUrl = Get-ItemProperty -Path $account.PSPath -Name "ServerUrl" -ErrorAction SilentlyContinue
-                if ($serverUrl.ServerUrl -like "*manage.microsoft.com*" -or $serverUrl.ServerUrl -like "*intune*") {
-                    try {
-                        Write-Log "Removing OMADM account: $($account.PSChildName)" -Level Info
-                        Remove-Item -Path $account.PSPath -Recurse -Force -ErrorAction Stop
-                        $removalSuccess = $true
-                    }
-                    catch {
-                        Write-Log "Failed to remove OMADM account: $($_.Exception.Message)" -Level Warning
-                    }
+                else {
+                    Write-Verbose "    Not an Intune enrollment, skipping" -Verbose
                 }
             }
         }
+        else {
+            Write-Verbose "  Enrollments path does not exist" -Verbose
+        }
+        
+        # Method 3: Clean up OMADM accounts
+        Write-Verbose "Method 3: Checking OMADM accounts" -Verbose
+        $omadmPath = "HKLM:\SOFTWARE\Microsoft\Provisioning\OMADM\Accounts"
+        if (Test-Path $omadmPath) {
+            $accounts = Get-ChildItem -Path $omadmPath -ErrorAction SilentlyContinue
+            Write-Verbose "  Found $($accounts.Count) OMADM accounts" -Verbose
+            foreach ($account in $accounts) {
+                Write-Verbose "  Checking account: $($account.PSChildName)" -Verbose
+                $serverUrl = Get-ItemProperty -Path $account.PSPath -Name "ServerUrl" -ErrorAction SilentlyContinue
+                Write-Verbose "    Server URL: $($serverUrl.ServerUrl)" -Verbose
+                if ($serverUrl.ServerUrl -like "*manage.microsoft.com*" -or $serverUrl.ServerUrl -like "*intune*") {
+                    try {
+                        Write-Verbose "    ✓ This is an Intune OMADM account, removing..." -Verbose
+                        Write-Log "Removing OMADM account: $($account.PSChildName)" -Level Info
+                        Remove-Item -Path $account.PSPath -Recurse -Force -ErrorAction Stop
+                        Write-Verbose "    Successfully removed" -Verbose
+                        $removalSuccess = $true
+                    }
+                    catch {
+                        Write-Verbose "    Failed to remove: $($_.Exception.Message)" -Verbose
+                        Write-Log "Failed to remove OMADM account: $($_.Exception.Message)" -Level Warning
+                    }
+                }
+                else {
+                    Write-Verbose "    Not an Intune account, skipping" -Verbose
+                }
+            }
+        }
+        else {
+            Write-Verbose "  OMADM path does not exist" -Verbose
+        }
         
         # Method 4: Remove enrollment scheduled tasks
+        Write-Verbose "Method 4: Removing MDM scheduled tasks" -Verbose
         Write-Log "Cleaning up MDM scheduled tasks..." -Level Info
         $mdmTasks = Get-ScheduledTask | Where-Object { 
             $_.TaskPath -like "*EnterpriseMgmt*" 
         }
+        Write-Verbose "  Found $($mdmTasks.Count) MDM-related tasks" -Verbose
         foreach ($task in $mdmTasks) {
+            Write-Verbose "  Removing task: $($task.TaskName) at path $($task.TaskPath)" -Verbose
             try {
                 Unregister-ScheduledTask -TaskName $task.TaskName -Confirm:$false -ErrorAction Stop
                 Write-Log "Removed MDM task: $($task.TaskName)" -Level Info
+                Write-Verbose "    Successfully removed" -Verbose
                 $removalSuccess = $true
             }
             catch {
+                Write-Verbose "    Failed to remove: $($_.Exception.Message)" -Verbose
                 Write-Log "Could not remove task $($task.TaskName): $($_.Exception.Message)" -Level Warning
             }
         }
         
         # Method 5: Clear AutoEnrollMDM registry keys
+        Write-Verbose "Method 5: Clearing AutoEnrollMDM registry keys" -Verbose
         $mdmPolicyPaths = @(
             "HKLM:\SOFTWARE\Policies\Microsoft\Windows\CurrentVersion\MDM",
             "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\MDM"
         )
         foreach ($path in $mdmPolicyPaths) {
+            Write-Verbose "  Checking path: $path" -Verbose
             if (Test-Path $path) {
+                Write-Verbose "    Path exists, clearing AutoEnrollMDM" -Verbose
                 try {
                     Remove-ItemProperty -Path $path -Name "AutoEnrollMDM" -ErrorAction SilentlyContinue
+                    Write-Verbose "    Cleared AutoEnrollMDM" -Verbose
                     $removalSuccess = $true
                 }
                 catch {
-                    # Ignore errors
+                    Write-Verbose "    No AutoEnrollMDM property found" -Verbose
                 }
             }
+            else {
+                Write-Verbose "    Path does not exist" -Verbose
+            }
         }
+        
+        Write-Verbose "=== Unenrollment Process Complete ===" -Verbose
         
         if ($removalSuccess) {
             Write-Log "Successfully cleaned up Intune enrollment data" -Level Success
