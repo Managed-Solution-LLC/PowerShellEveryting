@@ -326,32 +326,132 @@ function Get-IntuneEnrollmentStatus {
 function Remove-IntuneEnrollment {
     <#
     .SYNOPSIS
-        Removes existing Intune enrollment
+        Removes existing Intune enrollment using multiple methods
     #>
     param(
-        [Parameter(Mandatory=$true)]
+        [Parameter(Mandatory=$false)]
         [string]$EnrollmentGUID
     )
     
     try {
-        Write-Log "Removing existing enrollment: $EnrollmentGUID" -Level Info
+        Write-Log "Attempting to unenroll device from Intune..." -Level Info
+        $removalSuccess = $false
         
-        # Remove enrollment registry keys
-        $enrollmentPath = "HKLM:\SOFTWARE\Microsoft\Enrollments\$EnrollmentGUID"
-        if (Test-Path $enrollmentPath) {
-            Remove-Item -Path $enrollmentPath -Recurse -Force -ErrorAction Stop
-            Write-Log "Removed enrollment registry keys" -Level Success
+        # Method 1: Remove specific enrollment if GUID is known
+        if ($EnrollmentGUID -and $EnrollmentGUID -ne "Unknown") {
+            Write-Log "Removing enrollment GUID: $EnrollmentGUID" -Level Info
+            
+            # Remove enrollment registry keys
+            $enrollmentPath = "HKLM:\SOFTWARE\Microsoft\Enrollments\$EnrollmentGUID"
+            if (Test-Path $enrollmentPath) {
+                Remove-Item -Path $enrollmentPath -Recurse -Force -ErrorAction Stop
+                Write-Log "Removed enrollment registry keys for $EnrollmentGUID" -Level Success
+                $removalSuccess = $true
+            }
+            
+            # Clean up enrollment tasks
+            $taskName = "*$EnrollmentGUID*"
+            $tasks = Get-ScheduledTask -TaskName $taskName -ErrorAction SilentlyContinue
+            foreach ($task in $tasks) {
+                Unregister-ScheduledTask -TaskName $task.TaskName -Confirm:$false -ErrorAction SilentlyContinue
+                Write-Log "Removed scheduled task: $($task.TaskName)" -Level Info
+            }
         }
         
-        # Clean up enrollment tasks
-        $taskName = "*$EnrollmentGUID*"
-        $tasks = Get-ScheduledTask -TaskName $taskName -ErrorAction SilentlyContinue
-        foreach ($task in $tasks) {
-            Unregister-ScheduledTask -TaskName $task.TaskName -Confirm:$false -ErrorAction SilentlyContinue
-            Write-Log "Removed scheduled task: $($task.TaskName)" -Level Info
+        # Method 2: Remove all Intune enrollments from registry
+        Write-Log "Scanning for all Intune enrollments..." -Level Info
+        $enrollmentBasePath = "HKLM:\SOFTWARE\Microsoft\Enrollments"
+        
+        if (Test-Path $enrollmentBasePath) {
+            $allEnrollments = Get-ChildItem -Path $enrollmentBasePath -ErrorAction SilentlyContinue
+            
+            foreach ($enrollment in $allEnrollments) {
+                $providerID = Get-ItemProperty -Path $enrollment.PSPath -Name "ProviderID" -ErrorAction SilentlyContinue
+                
+                if ($providerID.ProviderID -in @("MS DM Server", "Intune", "Microsoft Intune")) {
+                    Write-Log "Found Intune enrollment: $($enrollment.PSChildName)" -Level Info
+                    
+                    try {
+                        Remove-Item -Path $enrollment.PSPath -Recurse -Force -ErrorAction Stop
+                        Write-Log "Removed enrollment: $($enrollment.PSChildName)" -Level Success
+                        $removalSuccess = $true
+                        
+                        # Remove associated scheduled tasks
+                        $taskPattern = "*$($enrollment.PSChildName)*"
+                        $relatedTasks = Get-ScheduledTask -TaskName $taskPattern -ErrorAction SilentlyContinue
+                        foreach ($task in $relatedTasks) {
+                            Unregister-ScheduledTask -TaskName $task.TaskName -Confirm:$false -ErrorAction SilentlyContinue
+                            Write-Log "Removed task: $($task.TaskName)" -Level Info
+                        }
+                    }
+                    catch {
+                        Write-Log "Failed to remove enrollment $($enrollment.PSChildName): $($_.Exception.Message)" -Level Warning
+                    }
+                }
+            }
         }
         
-        return $true
+        # Method 3: Clean up OMADM accounts
+        $omadmPath = "HKLM:\SOFTWARE\Microsoft\Provisioning\OMADM\Accounts"
+        if (Test-Path $omadmPath) {
+            $accounts = Get-ChildItem -Path $omadmPath -ErrorAction SilentlyContinue
+            foreach ($account in $accounts) {
+                $serverUrl = Get-ItemProperty -Path $account.PSPath -Name "ServerUrl" -ErrorAction SilentlyContinue
+                if ($serverUrl.ServerUrl -like "*manage.microsoft.com*" -or $serverUrl.ServerUrl -like "*intune*") {
+                    try {
+                        Write-Log "Removing OMADM account: $($account.PSChildName)" -Level Info
+                        Remove-Item -Path $account.PSPath -Recurse -Force -ErrorAction Stop
+                        $removalSuccess = $true
+                    }
+                    catch {
+                        Write-Log "Failed to remove OMADM account: $($_.Exception.Message)" -Level Warning
+                    }
+                }
+            }
+        }
+        
+        # Method 4: Remove enrollment scheduled tasks
+        Write-Log "Cleaning up MDM scheduled tasks..." -Level Info
+        $mdmTasks = Get-ScheduledTask | Where-Object { 
+            $_.TaskPath -like "*EnterpriseMgmt*" 
+        }
+        foreach ($task in $mdmTasks) {
+            try {
+                Unregister-ScheduledTask -TaskName $task.TaskName -Confirm:$false -ErrorAction Stop
+                Write-Log "Removed MDM task: $($task.TaskName)" -Level Info
+                $removalSuccess = $true
+            }
+            catch {
+                Write-Log "Could not remove task $($task.TaskName): $($_.Exception.Message)" -Level Warning
+            }
+        }
+        
+        # Method 5: Clear AutoEnrollMDM registry keys
+        $mdmPolicyPaths = @(
+            "HKLM:\SOFTWARE\Policies\Microsoft\Windows\CurrentVersion\MDM",
+            "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\MDM"
+        )
+        foreach ($path in $mdmPolicyPaths) {
+            if (Test-Path $path) {
+                try {
+                    Remove-ItemProperty -Path $path -Name "AutoEnrollMDM" -ErrorAction SilentlyContinue
+                    $removalSuccess = $true
+                }
+                catch {
+                    # Ignore errors
+                }
+            }
+        }
+        
+        if ($removalSuccess) {
+            Write-Log "Successfully cleaned up Intune enrollment data" -Level Success
+            Write-Log "Note: Device may need to restart for complete unenrollment" -Level Warning
+        }
+        else {
+            Write-Log "No enrollment data was removed (may already be clean)" -Level Warning
+        }
+        
+        return $removalSuccess
     }
     catch {
         Write-Log "Failed to remove enrollment: $($_.Exception.Message)" -Level Error
@@ -530,14 +630,35 @@ if ($enrollmentStatus.IsEnrolled) {
         Write-Host $SubSeparator -ForegroundColor Yellow
         
         if ($PSCmdlet.ShouldProcess("Intune Enrollment", "Remove existing enrollment")) {
-            $removed = Remove-IntuneEnrollment -EnrollmentGUID $enrollmentStatus.EnrollmentGUID
-            
-            if (-not $removed) {
-                Write-Log "Failed to remove existing enrollment. Proceeding with caution." -Level Warning
+            # Pass GUID even if "Unknown" - function will handle it
+            if ($enrollmentStatus.EnrollmentGUID -and $enrollmentStatus.EnrollmentGUID -ne "Unknown") {
+                $removed = Remove-IntuneEnrollment -EnrollmentGUID $enrollmentStatus.EnrollmentGUID
+            }
+            else {
+                # No specific GUID, let function scan for all enrollments
+                $removed = Remove-IntuneEnrollment
             }
             
-            # Wait for cleanup to complete
-            Start-Sleep -Seconds 10
+            if ($removed) {
+                Write-Log "Enrollment data removed. Waiting for system cleanup..." -Level Success
+            }
+            else {
+                Write-Log "Unenrollment may be incomplete. Manual cleanup may be required." -Level Warning
+            }
+            
+            # Wait longer for cleanup to complete and system to stabilize
+            Write-Log "Waiting 15 seconds for system to stabilize..." -Level Info
+            Start-Sleep -Seconds 15
+            
+            # Verify unenrollment
+            $verifyStatus = Get-IntuneEnrollmentStatus
+            if ($verifyStatus.IsEnrolled) {
+                Write-Log "Device still shows as enrolled after cleanup. Re-enrollment may fail." -Level Warning
+                Write-Log "You may need to restart the device and run the script again." -Level Info
+            }
+            else {
+                Write-Log "Device successfully unenrolled" -Level Success
+            }
         }
     }
     else {
