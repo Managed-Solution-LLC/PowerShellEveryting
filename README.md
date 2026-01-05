@@ -16,6 +16,7 @@ scripts/
 │   ├── Lync/       # Lync/Skype for Business assessment tools
 │   ├── Microsoft365/  # Microsoft 365 assessment tools
 │   ├── Office365/  # Office 365 tenant assessments (legacy location)
+│   ├── On Premise/ # On-premise Windows Server assessments
 │   ├── Security/   # Security posture assessments
 │   └── Teams/      # Teams infrastructure assessments
 ├── Azure/           # Azure and Microsoft 365 automation scripts
@@ -64,12 +65,20 @@ docs/                # Project documentation and guides
 ### Microsoft Teams
 - `scripts/Assessment/Teams/Get-ComprehensiveTeamsReport.ps1` – Full Teams infrastructure assessment
 
+### On-Premise Infrastructure
+- `scripts/Assessment/On Premise/Start-FileShareAssessment.ps1` – Comprehensive file share assessment with Excel reporting ([docs](docs/wiki/Assessments/OnPremise/Start-FileShareAssessment.md))
+  - Automatic SMB share discovery
+  - Storage analysis and NTFS permission mapping
+  - SharePoint/OneDrive compatibility checking
+  - Professional Excel report generation
+
 ## Documentation
 
 ### Wiki Documentation
 Detailed documentation for scripts is available in the `docs/wiki/` directory:
 - **[Lync Assessment Scripts](docs/wiki/Assessments/Lync/README.md)** - Complete Lync/Skype for Business assessment suite
 - **[Microsoft 365 Assessment Scripts](docs/wiki/Assessments/Microsoft365/)** - M365 tenant assessment tools
+- **[On-Premise Assessment Scripts](scripts/Assessment/On%20Premise/README.md)** - File share and server assessment tools
 - **[Office 365 Quick Start Guide](docs/Office365-Quick-Start.md)** - Getting started with O365 assessments
 
 ### Script Documentation
