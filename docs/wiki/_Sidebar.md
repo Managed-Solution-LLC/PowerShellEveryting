@@ -58,6 +58,7 @@
 
 ## 📚 Guides
 
+- [Running Scripts from GitHub](Running-Scripts-from-GitHub)
 - [Office 365 Quick Start](../Office365-Quick-Start)
 - [Office 365 Assessment Guide](../Office365-Assessment-Guide)
 

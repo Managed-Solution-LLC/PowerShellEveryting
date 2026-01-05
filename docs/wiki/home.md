@@ -58,8 +58,7 @@ Microsoft Intune device enrollment and management:
   - Automatic policy synchronization
   - Comprehensive enrollment validation
 
-### �🔧 Development Resources
-- **Code Standards** - PowerShell coding standards and best practices _(coming soon)_
+### �🔧 Development Resources- **[Running Scripts from GitHub](Running-Scripts-from-GitHub)** - Execute PowerShell scripts directly from GitHub- **Code Standards** - PowerShell coding standards and best practices _(coming soon)_
 - **Graph Commands** - Microsoft Graph API helpers and utilities _(documentation pending)_
 
 ## 🎯 Featured Scripts
