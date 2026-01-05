@@ -33,7 +33,10 @@
 - [Merge-PKIAssessmentReports](Merge-PKIAssessmentReports)
 
 ### Teams
-- Teams Assessment Scripts _(coming soon)_
+- [Get-ComprehensiveTeamsReport](Get-ComprehensiveTeamsReport)
+
+### Intune
+- [Start-IntuneEnrollment](Start-IntuneEnrollment)
 
 ### Security
 - Security Assessment Scripts _(coming soon)_

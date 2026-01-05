@@ -40,7 +40,25 @@ Public Key Infrastructure assessment and reporting:
 - **[Get-PKIHealthReport](Get-PKIHealthReport)** - PKI health monitoring and diagnostics
 - **[Merge-PKIAssessmentReports](Merge-PKIAssessmentReports)** - Combine multiple PKI assessment reports
 
-### 🔧 Development Resources
+### � Microsoft Teams Assessments
+
+Microsoft Teams infrastructure assessment and analysis:
+- **[Get-ComprehensiveTeamsReport](Get-ComprehensiveTeamsReport)** - Complete Teams infrastructure assessment
+  - Tenant configuration and policy analysis
+  - Voice infrastructure (Direct Routing, Calling Plans)
+  - User licensing and compliance reporting
+  - Executive summary with recommendations
+
+### 📱 Intune Management
+
+Microsoft Intune device enrollment and management:
+- **[Start-IntuneEnrollment](Start-IntuneEnrollment)** - Force enrollment of Entra Joined devices
+  - 3-tiered enrollment detection
+  - GitHub direct execution support
+  - Automatic policy synchronization
+  - Comprehensive enrollment validation
+
+### �🔧 Development Resources
 - **Code Standards** - PowerShell coding standards and best practices _(coming soon)_
 - **Graph Commands** - Microsoft Graph API helpers and utilities _(documentation pending)_
 
