@@ -9,21 +9,28 @@
 ## 📊 Assessment Scripts
 
 ### Lync/Skype for Business
-- [Overview](Assessments-Lync-README)
-- [Start-LyncCsvExporter](Assessments-Lync-Start-LyncCsvExporter)
-- [Get-ComprehensiveLyncReport](Assessments-Lync-Get-ComprehensiveLyncReport)
-- [Get-LyncHealthReport](Assessments-Lync-Get-LyncHealthReport)
-- [Get-LyncInfrastructureReport](Assessments-Lync-Get-LyncInfrastructureReport)
-- [Get-LyncServiceStatus](Assessments-Lync-Get-LyncServiceStatus)
-- [Get-LyncUserRegistrationReport](Assessments-Lync-Get-LyncUserRegistrationReport)
-- [Export-ADLyncTeamsMigrationData](Assessments-Lync-Export-ADLyncTeamsMigrationData)
+- [Overview](README)
+- [Start-LyncCsvExporter](Start-LyncCsvExporter)
+- [Get-ComprehensiveLyncReport](Get-ComprehensiveLyncReport)
+- [Get-LyncHealthReport](Get-LyncHealthReport)
+- [Get-LyncInfrastructureReport](Get-LyncInfrastructureReport)
+- [Get-LyncServiceStatus](Get-LyncServiceStatus)
+- [Get-LyncUserRegistrationReport](Get-LyncUserRegistrationReport)
+- [Export-ADLyncTeamsMigrationData](Export-ADLyncTeamsMigrationData)
 
 ### Microsoft 365
-- [Overview](Assessments-Microsoft365-README)
-- [Get-QuickO365Report](Assessments-Microsoft365-Get-QuickO365Report)
-- [Get-MailboxPermissionsReport](Assessments-Microsoft365-Get-MailboxPermissionsReport)
-- [Get-MailboxRules](Assessments-Microsoft365-Get-MailboxRules)
-- [Get-MigrationWizLicensing](Assessments-Microsoft365-Get-MigrationWizLicensing)
+- [Get-QuickO365Report](Get-QuickO365Report)
+- [Get-MailboxPermissionsReport](Get-MailboxPermissionsReport)
+- [Get-MailboxRules](Get-MailboxRules)
+- [Get-MigrationWizLicensing](Get-MigrationWizLicensing)
+
+### On-Premise Infrastructure
+- [Start-FileShareAssessment](Start-FileShareAssessment)
+
+### PKI
+- [Get-ComprehensivePKIReport](Get-ComprehensivePKIReport)
+- [Get-PKIHealthReport](Get-PKIHealthReport)
+- [Merge-PKIAssessmentReports](Merge-PKIAssessmentReports)
 
 ### Teams
 - Teams Assessment Scripts _(coming soon)_
