@@ -25,6 +25,7 @@
 - [Get-MigrationWizLicensing](Get-MigrationWizLicensing)
 
 ### On-Premise Infrastructure
+- [Get-ComprehensiveADReport](Get-ComprehensiveADReport)
 - [Start-FileShareAssessment](Start-FileShareAssessment)
 
 ### PKI

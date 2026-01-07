@@ -26,7 +26,14 @@ Office 365 tenant assessment and reporting tools:
 
 ### 🖥️ On-Premise Infrastructure Assessments
 
-Windows Server and file share assessment tools:
+Active Directory and Windows Server assessment tools:
+- **[Get-ComprehensiveADReport](Get-ComprehensiveADReport)** - Complete Active Directory assessment for AD to AD migrations
+  - Full user, group, OU, and computer inventory
+  - User matching attribute analysis (EmployeeID, email, UPN)
+  - Privileged account identification
+  - Cross-domain and cross-forest query support
+  - Migration recommendations and data quality analysis
+  - Executive summary with matching strategies
 - **[Start-FileShareAssessment](Start-FileShareAssessment)** - Comprehensive file share assessment with Excel reporting
   - Automatic SMB share discovery
   - Storage analysis and NTFS permission mapping
@@ -106,6 +113,23 @@ All-in-one file share assessment tool that discovers SMB shares, analyzes storag
 ```
 
 [View Documentation →](Start-FileShareAssessment)
+
+### Get-ComprehensiveADReport.ps1
+Complete Active Directory assessment for AD to AD migration planning. Exports all users, groups, OUs, and privileged accounts with user matching attribute analysis. Supports cross-domain and cross-forest queries.
+
+**Quick Start:**
+```powershell
+# Basic assessment
+.\Get-ComprehensiveADReport.ps1 -OrganizationName "Contoso"
+
+# Query different domain
+.\Get-ComprehensiveADReport.ps1 -Domain "sachicis.org" -OrganizationName "SACHICIS"
+
+# Cross-forest with credentials
+.\Get-ComprehensiveADReport.ps1 -Domain "partner.com" -Credential (Get-Credential)
+```
+
+[View Documentation →](Get-ComprehensiveADReport)
 
 ## 🚀 Quick Start
 
