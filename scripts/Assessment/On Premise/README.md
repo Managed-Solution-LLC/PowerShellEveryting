@@ -47,6 +47,43 @@ This folder contains scripts for assessing on-premise Windows Server infrastruct
 
 ---
 
+#### [Check-ADMTPrerequisites.ps1](Check-ADMTPrerequisites.ps1)
+**Purpose**: Validate environment readiness for Active Directory Migration Tool (ADMT) migrations
+
+**Features**:
+- DNS resolution validation for source and target domains
+- Domain functional level checks
+- Trust relationship analysis (type, direction, configuration)
+- Permission verification (Domain Admin, read access)
+- Network connectivity testing (LDAP, Kerberos, SMB, RPC, etc.)
+- Optional SID History prerequisite checks
+- Optional Password Export Server (PES) validation
+- SQL Server detection for ADMT database
+- Color-coded console output with remediation guidance
+- Automated CSV export with pass/fail/warning status
+
+**Quick Start**:
+```powershell
+# Basic ADMT prerequisites check
+.\Check-ADMTPrerequisites.ps1 -SourceDomain "old.contoso.com" -TargetDomain "new.contoso.com"
+
+# Include SID History checks
+.\Check-ADMTPrerequisites.ps1 -SourceDomain "old.contoso.com" -TargetDomain "new.contoso.com" -CheckSIDHistory -SourcePDC "dc01.old.contoso.com"
+
+# Full check with password migration
+.\Check-ADMTPrerequisites.ps1 -SourceDomain "legacy.fabrikam.com" -CheckPES -CheckSIDHistory -SourcePDC "pdc.legacy.fabrikam.com"
+```
+
+**Documentation**: [Full Documentation](../../../docs/wiki/Assessments/OnPremise/Check-ADMTPrerequisites.md)
+
+**Typical Use Cases**:
+- Pre-migration validation for ADMT projects
+- Troubleshooting ADMT connectivity issues
+- Documenting migration prerequisites for compliance
+- Validating trust relationships and permissions
+- Network connectivity verification between domains
+- SID History migration preparation
+
 ### File Share Assessment
 
 #### [Start-FileShareAssessment.ps1](Start-FileShareAssessment.ps1)

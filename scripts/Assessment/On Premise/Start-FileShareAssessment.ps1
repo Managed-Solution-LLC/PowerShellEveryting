@@ -238,7 +238,7 @@ function Export-FileShareSize {
         Write-Log "Share size analysis completed: $outputPath" -Level Success
     }
     catch {
-        Write-Log "Failed to analyze share ${shareName}: $($_.Exception.Message)" -Level Error
+        Write-Log "Failed to analyze share ${shareName} : $($_.Exception.Message)" -Level Error
     }
 }
 
@@ -379,6 +379,193 @@ function Install-RequiredModules {
     }
 }
 
+function Export-UniquePermissions {
+    Write-Log "Extracting unique permissions from RawData..." -Level Info
+    
+    $rawDataPath = Join-Path $OutputDirectory "RawData"
+    
+    if (-not (Test-Path $rawDataPath)) {
+        Write-Log "No RawData folder found, skipping unique permissions extraction" -Level Warning
+        return
+    }
+    
+    $permissionFiles = Get-ChildItem -Path $rawDataPath -Filter "permissions_*.csv" -File -ErrorAction SilentlyContinue
+    
+    if ($permissionFiles.Count -eq 0) {
+        Write-Log "No permission files found in RawData folder" -Level Warning
+        return
+    }
+    
+    Write-Log "Processing $($permissionFiles.Count) permission files..." -Level Info
+    
+    try {
+        # Collect all permissions
+        $allPermissions = @()
+        foreach ($file in $permissionFiles) {
+            $data = Import-Csv -Path $file.FullName -ErrorAction Stop
+            if ($data) {
+                $allPermissions += $data
+            }
+        }
+        
+        if ($allPermissions.Count -eq 0) {
+            Write-Log "No permissions data found in CSV files" -Level Warning
+            return
+        }
+        
+        Write-Log "Collected $($allPermissions.Count) total permission entries" -Level Info
+        
+        # Analyze folder-level permissions for SharePoint mapping
+        Write-Log "Analyzing folder hierarchy for SharePoint mapping..." -Level Info
+        
+        # Group permissions by folder path
+        $folderPermissions = $allPermissions | Where-Object { -not [string]::IsNullOrWhiteSpace($_.Path) } | Group-Object Path | ForEach-Object {
+            $folderPath = $_.Name
+            $folderPerms = $_.Group
+            
+            # Create permission signature for this folder (non-inherited permissions)
+            $explicitPerms = $folderPerms | Where-Object { $_.IsInherited -eq $false }
+            
+            if ($explicitPerms) {
+                $permSignature = ($explicitPerms | 
+                    Sort-Object IdentityReference, FileSystemRights, AccessControlType | 
+                    ForEach-Object { "$($_.IdentityReference)|$($_.FileSystemRights)|$($_.AccessControlType)" }) -join ';'
+            } else {
+                $permSignature = "INHERITED_ONLY"
+            }
+            
+            [PSCustomObject]@{
+                Path = $folderPath
+                Depth = ($folderPath -split '\\').Count
+                PermissionSignature = $permSignature
+                ExplicitPermissionCount = $explicitPerms.Count
+                TotalPermissionCount = $folderPerms.Count
+                UniqueIdentities = ($explicitPerms | Select-Object -ExpandProperty IdentityReference -Unique | Measure-Object).Count
+            }
+        }
+        
+        Write-Log "Analyzed $($folderPermissions.Count) unique folder paths" -Level Info
+        
+        # Find folders with unique permission boundaries (lowest level with explicit permissions)
+        $uniquePermissionBoundaries = @()
+        $processedSignatures = @{}
+        
+        foreach ($folder in ($folderPermissions | Sort-Object Depth -Descending)) {
+            if ($folder.ExplicitPermissionCount -gt 0 -and $folder.PermissionSignature -ne "INHERITED_ONLY") {
+                # Track unique permission signatures at lowest levels
+                if (-not $processedSignatures.ContainsKey($folder.PermissionSignature)) {
+                    $uniquePermissionBoundaries += $folder
+                    $processedSignatures[$folder.PermissionSignature] = $folder.Path
+                }
+            }
+        }
+        
+        Write-Log "Identified $($uniquePermissionBoundaries.Count) unique permission boundaries" -Level Success
+        
+        # Create SharePoint mapping recommendations
+        $sharepointMapping = foreach ($boundary in $uniquePermissionBoundaries) {
+            $boundaryPath = $boundary.Path
+            $perms = $allPermissions | Where-Object { $_.Path -eq $boundaryPath -and $_.IsInherited -eq $false }
+            
+            $identityList = ($perms | Select-Object -ExpandProperty IdentityReference -Unique | Sort-Object) -join '; '
+            $rightsList = ($perms | Select-Object FileSystemRights, AccessControlType -Unique | 
+                ForEach-Object { "$($_.AccessControlType): $($_.FileSystemRights)" }) -join '; '
+            
+            # Suggest SharePoint site structure
+            $pathParts = $boundaryPath -split '\\'
+            $shareName = if ($pathParts.Count -gt 2) { $pathParts[2] } else { "Root" }
+            $relativePath = if ($pathParts.Count -gt 3) { 
+                ($pathParts[3..($pathParts.Count-1)] -join '/')
+            } else { 
+                "Root" 
+            }
+            
+            [PSCustomObject]@{
+                FolderPath = $boundaryPath
+                ShareName = $shareName
+                RelativePath = $relativePath
+                FolderDepth = $boundary.Depth
+                UniqueIdentities = $boundary.UniqueIdentities
+                Identities = $identityList
+                Permissions = $rightsList
+                PermissionSignature = $boundary.PermissionSignature
+                RecommendedAction = if ($boundary.Depth -le 4) { 
+                    "Create as SharePoint Site or Document Library" 
+                } else { 
+                    "Set as folder-level permission in SharePoint" 
+                }
+            }
+        }
+        
+        # Create detailed unique permissions list
+        $detailedUniquePermissions = $allPermissions |
+            Group-Object IdentityReference, FileSystemRights, AccessControlType |
+            Select-Object @{
+                Name='Identity'; Expression={($_.Name -split ', ')[0]}
+            }, @{
+                Name='FileSystemRights'; Expression={($_.Name -split ', ')[1]}
+            }, @{
+                Name='AccessControlType'; Expression={($_.Name -split ', ')[2]}
+            }, @{
+                Name='Occurrences'; Expression={$_.Count}
+            }, @{
+                Name='SamplePath'; Expression={$_.Group[0].Path}
+            }, @{
+                Name='IsInherited'; Expression={$_.Group[0].IsInherited}
+            }, @{
+                Name='InheritanceFlags'; Expression={$_.Group[0].InheritanceFlags}
+            }, @{
+                Name='PropagationFlags'; Expression={$_.Group[0].PropagationFlags}
+            } |
+            Sort-Object Identity, FileSystemRights
+        
+        # Create identity summary
+        $identitySummary = $allPermissions | 
+            Group-Object IdentityReference | 
+            Select-Object @{
+                Name='Identity'; Expression={$_.Name}
+            }, @{
+                Name='TotalOccurrences'; Expression={$_.Count}
+            }, @{
+                Name='UniqueRightsCombinations'; Expression={
+                    ($_.Group | Select-Object FileSystemRights, AccessControlType -Unique).Count
+                }
+            } |
+            Sort-Object TotalOccurrences -Descending
+        
+        # Export results
+        $timestamp = Get-Date -Format 'yyyyMMdd_HHmmss'
+        $uniquePermissionsFile = Join-Path $OutputDirectory "$($Domain)_Unique_Permissions_Detailed_$timestamp.csv"
+        $identitySummaryFile = Join-Path $OutputDirectory "$($Domain)_Unique_Identities_Summary_$timestamp.csv"
+        $sharepointMappingFile = Join-Path $OutputDirectory "$($Domain)_SharePoint_Permission_Mapping_$timestamp.csv"
+        $folderPermissionsFile = Join-Path $OutputDirectory "$($Domain)_Folder_Permissions_Analysis_$timestamp.csv"
+        
+        $detailedUniquePermissions | Export-Csv -Path $uniquePermissionsFile -NoTypeInformation -Encoding UTF8
+        $identitySummary | Export-Csv -Path $identitySummaryFile -NoTypeInformation -Encoding UTF8
+        $sharepointMapping | Export-Csv -Path $sharepointMappingFile -NoTypeInformation -Encoding UTF8
+        $folderPermissions | Export-Csv -Path $folderPermissionsFile -NoTypeInformation -Encoding UTF8
+        
+        Write-Log "Exported unique permissions: $($detailedUniquePermissions.Count) combinations" -Level Success
+        Write-Log "Exported identity summary: $($identitySummary.Count) identities" -Level Success
+        Write-Log "Exported SharePoint mapping: $($sharepointMapping.Count) permission boundaries" -Level Success
+        
+        return @{
+            UniquePermissions = $detailedUniquePermissions
+            IdentitySummary = $identitySummary
+            SharePointMapping = $sharepointMapping
+            FolderPermissions = $folderPermissions
+            UniquePermissionsFile = $uniquePermissionsFile
+            IdentitySummaryFile = $identitySummaryFile
+            SharePointMappingFile = $sharepointMappingFile
+            FolderPermissionsFile = $folderPermissionsFile
+        }
+    }
+    catch {
+        Write-Log "Failed to extract unique permissions: $($_.Exception.Message)" -Level Error
+        return $null
+    }
+}
+
 function New-FileShareAssessmentExcel {
     Write-Log "Creating Excel workbook..." -Level Info
     
@@ -435,7 +622,7 @@ function New-FileShareAssessmentExcel {
                 Write-Log "Processing $($permissionFiles.Count) permission files" -Level Info
                 foreach ($file in $permissionFiles) {
                     $worksheetName = $file.BaseName
-                    if ($worksheetName.Length > 31) {
+                    if ($worksheetName.Length -gt 31) {
                         $worksheetName = $worksheetName.Substring(0, 31)
                     }
                     $data = Import-Csv -Path $file.FullName
@@ -546,9 +733,21 @@ foreach ($share in $shares) {
     Write-Host ""
 }
 
-# Step 4: Create Excel report
+# Step 4: Extract unique permissions
 Write-Host "`n$SubSeparator" -ForegroundColor Yellow
-Write-Host "STEP 4: Creating Excel Report" -ForegroundColor Yellow
+Write-Host "STEP 4: Extracting Unique Permissions" -ForegroundColor Yellow
+Write-Host $SubSeparator -ForegroundColor Yellow
+
+if (-not $SkipPermissions) {
+    $uniquePermissionsResult = Export-UniquePermissions
+}
+else {
+    Write-Log "Unique permissions extraction skipped (no permissions data collected)" -Level Info
+}
+
+# Step 5: Create Excel report
+Write-Host "`n$SubSeparator" -ForegroundColor Yellow
+Write-Host "STEP 5: Creating Excel Report" -ForegroundColor Yellow
 Write-Host $SubSeparator -ForegroundColor Yellow
 
 $excelPath = New-FileShareAssessmentExcel
@@ -563,6 +762,16 @@ Write-Host $Separator -ForegroundColor Cyan
 Write-Host "Duration: $($Duration.ToString('hh\:mm\:ss'))" -ForegroundColor White
 Write-Host "Shares Assessed: $($shares.Count)" -ForegroundColor White
 Write-Host "Errors: $script:ErrorCount | Warnings: $script:WarningCount" -ForegroundColor $(if($script:ErrorCount -gt 0){'Red'}else{'Green'})
+
+if ($uniquePermissionsResult) {
+    Write-Host "`n📋 Unique Permissions Extracted:" -ForegroundColor Cyan
+    Write-Host "  • $($uniquePermissionsResult.UniquePermissions.Count) unique permission combinations" -ForegroundColor White
+    Write-Host "  • $($uniquePermissionsResult.IdentitySummary.Count) unique identities (users/groups)" -ForegroundColor White
+    Write-Host "`n📍 SharePoint Migration Planning:" -ForegroundColor Yellow
+    Write-Host "  • $($uniquePermissionsResult.FolderPermissions.Count) folder paths analyzed" -ForegroundColor White
+    Write-Host "  • $($uniquePermissionsResult.SharePointMapping.Count) permission boundaries (lowest level)" -ForegroundColor Cyan
+    Write-Host "    └─ Folders requiring unique SharePoint permissions" -ForegroundColor Gray
+}
 
 if ($excelPath -and (Test-Path $excelPath)) {
     Write-Host "`n📊 Excel Report: $excelPath" -ForegroundColor Green

@@ -34,6 +34,13 @@ Active Directory and Windows Server assessment tools:
   - Cross-domain and cross-forest query support
   - Migration recommendations and data quality analysis
   - Executive summary with matching strategies
+- **[Check-ADMTPrerequisites](Check-ADMTPrerequisites)** - ADMT migration readiness validation
+  - Domain functional level and trust relationship checks
+  - Permission and network connectivity validation
+  - SID History and Password Export Server prerequisites
+  - Port connectivity testing for all AD protocols
+  - Automated remediation guidance
+  - CSV export with pass/fail/warning status
 - **[Start-FileShareAssessment](Start-FileShareAssessment)** - Comprehensive file share assessment with Excel reporting
   - Automatic SMB share discovery
   - Storage analysis and NTFS permission mapping

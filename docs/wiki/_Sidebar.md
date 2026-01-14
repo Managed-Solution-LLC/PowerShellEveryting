@@ -26,6 +26,7 @@
 
 ### On-Premise Infrastructure
 - [Get-ComprehensiveADReport](Get-ComprehensiveADReport)
+- [Check-ADMTPrerequisites](Check-ADMTPrerequisites)
 - [Start-FileShareAssessment](Start-FileShareAssessment)
 
 ### PKI
