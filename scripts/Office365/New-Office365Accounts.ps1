@@ -623,7 +623,8 @@ function Export-AccountResults {
             catch {
                 # Ignore if Get-CloudDrive is not available
             }
-        }    }
+        }
+    }
     catch {
         Write-StatusMessage "Failed to export results: $($_.Exception.Message)" -Type Error
     }
