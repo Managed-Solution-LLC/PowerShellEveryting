@@ -57,7 +57,9 @@
 
 .PARAMETER OutputDirectory
     Directory where output files will be saved.
-    Default: C:\Reports\AccountCreation
+    Default: C:\Reports\AccountCreation (Windows)
+    Default: ~/clouddrive/AccountCreation (Cloud Shell)
+    Auto-detected based on environment.
 
 .PARAMETER GeneratePasswords
     Force password generation even if passwords are provided in CSV.
@@ -115,6 +117,12 @@
     
     Creates accounts and automatically provisions OneDrive for each user.
 
+.EXAMPLE
+    # From Azure Cloud Shell
+    .\New-Office365Accounts.ps1 -UserArray $users
+    
+    Automatically detects Cloud Shell and saves output to ~/clouddrive/AccountCreation/
+
 .NOTES
     Author: W. Ford
     Date: 2026-01-22
@@ -123,11 +131,17 @@
     Requirements:
     - For Microsoft 365: Microsoft.Graph.Users module
     - For OneDrive initialization: Microsoft.Graph.Files and Microsoft.Graph.Sites modules
-    - For Active Directory: ActiveDirectory module
-    - PowerShell 5.1 or later
+    - For Active Directory: ActiveDirectory module (not available in Cloud Shell)
+    - PowerShell 5.1 or later (Cloud Shell supported)
     - Appropriate permissions:
       * M365: User.ReadWrite.All permission in Microsoft Graph
       * AD: Account creation rights in target OU
+    
+    Cloud Shell:
+    - Automatically detects Azure Cloud Shell environment
+    - Saves output to ~/clouddrive/ for persistent storage
+    - Provides download instructions for exported files
+    - Works seamlessly with pre-installed Microsoft.Graph modules
     
     Output:
     - CSV file with created accounts and passwords (timestamp in filename)
@@ -190,7 +204,7 @@ param(
     [string]$AccountType = "Microsoft365",
     
     [Parameter(Mandatory=$false)]
-    [string]$OutputDirectory = "C:\Reports\AccountCreation",
+    [string]$OutputDirectory,  # Default set in code based on environment detection
     
     [Parameter(Mandatory=$false)]
     [switch]$GeneratePasswords,
@@ -226,10 +240,71 @@ Write-Host "`n$Separator" -ForegroundColor Cyan
 Write-Host "ACCOUNT CREATION UTILITY" -ForegroundColor Cyan
 Write-Host "Started: $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')" -ForegroundColor Cyan
 Write-Host $Separator -ForegroundColor Cyan
+# Detect environment and set default output directory if not specified
+if ([string]::IsNullOrWhiteSpace($OutputDirectory)) {
+    $OutputDirectory = Get-DefaultOutputDirectory
+}
 
+# Display environment info
+if (Test-CloudShell) {
+    Write-Host "Environment: Azure Cloud Shell" -ForegroundColor Cyan
+    Write-Host "PowerShell Version: $($PSVersionTable.PSVersion)" -ForegroundColor Gray
+}
+else {
+    Write-Host "Environment: $([System.Environment]::OSVersion.Platform)" -ForegroundColor Cyan
+}
 #endregion
 
 #region Functions
+
+function Test-CloudShell {
+    <#
+    .SYNOPSIS
+        Detects if running in Azure Cloud Shell environment
+    #>
+    
+    # Check for Cloud Shell specific environment variables
+    $cloudShellIndicators = @(
+        $env:ACC_CLOUD,
+        $env:AZURE_HTTP_USER_AGENT,
+        $env:POWERSHELL_DISTRIBUTION_CHANNEL
+    )
+    
+    # Check if any Cloud Shell indicators are present
+    $isCloudShell = $cloudShellIndicators | Where-Object { 
+        $_ -and ($_ -like "*CloudShell*" -or $_ -like "*Azure*")
+    }
+    
+    # Additional check: Cloud Shell typically has clouddrive mounted
+    if (-not $isCloudShell -and (Test-Path "$HOME/clouddrive" -ErrorAction SilentlyContinue)) {
+        $isCloudShell = $true
+    }
+    
+    return [bool]$isCloudShell
+}
+
+function Get-DefaultOutputDirectory {
+    <#
+    .SYNOPSIS
+        Returns appropriate default output directory based on environment
+    #>
+    
+    if (Test-CloudShell) {
+        # Cloud Shell - use persistent clouddrive
+        $cloudDrivePath = "$HOME/clouddrive/AccountCreation"
+        Write-Host "🌥️  Azure Cloud Shell detected" -ForegroundColor Cyan
+        Write-Host "   Output will be saved to persistent clouddrive: $cloudDrivePath" -ForegroundColor Cyan
+        return $cloudDrivePath
+    }
+    elseif ($IsLinux -or $IsMacOS) {
+        # Linux/Mac
+        return "$HOME/Reports/AccountCreation"
+    }
+    else {
+        # Windows
+        return "C:\Reports\AccountCreation"
+    }
+}
 
 function Write-StatusMessage {
     param(
@@ -527,8 +602,28 @@ function Export-AccountResults {
     try {
         $Accounts | Export-Csv -Path $outputFile -NoTypeInformation -Encoding UTF8
         Write-Host "`n✅ Exported $($Accounts.Count) account(s) to: $outputFile" -ForegroundColor Green
-        Write-Host "   ⚠️  IMPORTANT: Secure this file - it contains passwords!" -ForegroundColor Yellow
-    }
+        Write-Host "   ⚠️  IMPORTANT: Secure this file - it contains passwords!" -ForegroundColor Yellow        
+        # Provide Cloud Shell specific instructions
+        if (Test-CloudShell) {
+            Write-Host "\n📥 Cloud Shell File Access:" -ForegroundColor Cyan
+            Write-Host "   • File saved to persistent clouddrive storage" -ForegroundColor White
+            Write-Host "   • Download via CLI: " -ForegroundColor White -NoNewline
+            Write-Host "download `"$outputFile`"" -ForegroundColor Yellow
+            Write-Host "   • Download via UI: Click 'Upload/Download files' button (folder icon) in toolbar" -ForegroundColor White
+            Write-Host "   • Or access via Azure Storage Explorer in your Azure Portal" -ForegroundColor White
+            Write-Host "   • File persists across Cloud Shell sessions" -ForegroundColor White
+            
+            # Try to get the Azure Storage account info
+            try {
+                $storageAccount = (Get-CloudDrive).FileShareName -split '\.' | Select-Object -First 1
+                if ($storageAccount) {
+                    Write-Host "   • Storage Account: $storageAccount" -ForegroundColor Gray
+                }
+            }
+            catch {
+                # Ignore if Get-CloudDrive is not available
+            }
+        }    }
     catch {
         Write-StatusMessage "Failed to export results: $($_.Exception.Message)" -Type Error
     }
