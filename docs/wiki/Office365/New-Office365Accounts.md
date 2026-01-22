@@ -134,6 +134,58 @@ Import-Module ActiveDirectory
 - Only applicable for Microsoft 365 accounts
 - Requires additional Graph permissions
 
+## Running from GitHub
+
+You can invoke this script directly from GitHub without downloading it first. This is particularly useful in Azure Cloud Shell or for quick testing.
+
+### Method 1: Direct Invocation (Recommended for Cloud Shell)
+```powershell
+# Download and run from GitHub
+$scriptUrl = "https://raw.githubusercontent.com/Managed-Solution-LLC/PowerShellEveryting/main/scripts/Office365/New-Office365Accounts.ps1"
+Invoke-WebRequest -Uri $scriptUrl -OutFile "./New-Office365Accounts.ps1"
+chmod +x ./New-Office365Accounts.ps1  # Linux/Cloud Shell only
+
+# Now run with your parameters
+./New-Office365Accounts.ps1 -UserArray $users
+```
+
+### Method 2: One-Line Execution (Advanced)
+```powershell
+# Execute directly without saving
+$scriptUrl = "https://raw.githubusercontent.com/Managed-Solution-LLC/PowerShellEveryting/main/scripts/Office365/New-Office365Accounts.ps1"
+Invoke-Expression (Invoke-WebRequest -Uri $scriptUrl -UseBasicParsing).Content
+```
+
+**Note:** After running with Method 2, you'll need to call the script's functions directly. Method 1 is recommended for most use cases.
+
+### Cloud Shell Quick Start
+```powershell
+# 1. Open Azure Cloud Shell (https://shell.azure.com)
+# 2. Download the script
+$scriptUrl = "https://raw.githubusercontent.com/Managed-Solution-LLC/PowerShellEveryting/main/scripts/Office365/New-Office365Accounts.ps1"
+Invoke-WebRequest -Uri $scriptUrl -OutFile "./New-Office365Accounts.ps1"
+
+# 3. Prepare your user data
+$users = @(
+    @{FirstName='John'; LastName='Doe'; EmailAddress='john.doe@contoso.com'; UsageLocation='US'}
+)
+
+# 4. Run the script
+./New-Office365Accounts.ps1 -UserArray $users
+
+# 5. Download the results
+# The script will provide the exact download command, e.g.:
+# download "/home/user/clouddrive/AccountCreation/AccountCreation_Results_20260122_143052.csv"
+```
+
+### Alternative: Clone Repository
+```powershell
+# Clone entire repository for offline use
+git clone https://github.com/Managed-Solution-LLC/PowerShellEveryting.git
+cd PowerShellEveryting/scripts/Office365
+./New-Office365Accounts.ps1 -CsvPath "path/to/users.csv"
+```
+
 ## Usage Examples
 
 ### Example 1: Basic CSV Import
@@ -460,10 +512,48 @@ for ($i = 0; $i -lt $allUsers.Count; $i += $batchSize) {
 }
 ```
 
+## GitHub Repository Access
+
+### Script Location
+**GitHub Repository:** [Managed-Solution-LLC/PowerShellEveryting](https://github.com/Managed-Solution-LLC/PowerShellEveryting)
+
+**Direct Script URL:**
+```
+https://raw.githubusercontent.com/Managed-Solution-LLC/PowerShellEveryting/main/scripts/Office365/New-Office365Accounts.ps1
+```
+
+### Quick Access in Cloud Shell
+Azure Cloud Shell has git pre-installed and is ideal for running this script:
+
+```powershell
+# Option 1: Download single script
+curl -O https://raw.githubusercontent.com/Managed-Solution-LLC/PowerShellEveryting/main/scripts/Office365/New-Office365Accounts.ps1
+
+# Option 2: Clone full repository
+git clone https://github.com/Managed-Solution-LLC/PowerShellEveryting.git
+cd PowerShellEveryting/scripts/Office365
+```
+
+### Benefits of Running from GitHub
+- ✅ **Always Latest Version** - Get the most recent updates
+- ✅ **No Local Storage Required** - Perfect for Cloud Shell
+- ✅ **Quick Testing** - Try before committing to local installation
+- ✅ **Consistent Environment** - Same script across all machines
+- ✅ **Easy Updates** - Just re-download to get latest version
+
+### Security Considerations
+When running scripts from the internet:
+1. **Review the code first** - Check the GitHub repository
+2. **Use HTTPS URLs** - Ensures encrypted transfer
+3. **Verify the source** - Confirm it's from the official repository
+4. **Check commit history** - Review recent changes on GitHub
+5. **Use raw.githubusercontent.com** - For direct script downloads
+
 ## Related Scripts
 - [New-AccountCreationTemplate.ps1](../../scripts/Assessment/Microsoft365/New-AccountCreationTemplate.md) - Generate CSV template
 - [Get-QuickO365Report.ps1](Assessments/Microsoft365/Get-QuickO365Report.md) - Tenant assessment
 - [Get-MailboxPermissionsReport.ps1](Assessments/Microsoft365/Get-MailboxPermissionsReport.md) - Audit permissions
+- [Running Scripts from GitHub Guide](../Running-Scripts-from-GitHub.md) - General guide for all scripts
 
 ## Workflow Integration
 

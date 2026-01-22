@@ -24,7 +24,18 @@ Office 365 tenant assessment and reporting tools:
 - **[Get-MailboxRules](Get-MailboxRules)** - Export mailbox rules (forwarding, redirects, auto-replies)
 - **[Get-MigrationWizLicensing](Get-MigrationWizLicensing)** - BitTitan MigrationWiz license calculator
 
-### 🖥️ On-Premise Infrastructure Assessments
+### � Office 365 User Management
+
+User account creation and management automation:
+- **[New-Office365Accounts](Office365/New-Office365Accounts)** - Bulk user account creation with password generation
+  - CSV batch import or array input
+  - Automatic secure password generation
+  - OneDrive provisioning support
+  - Cloud Shell optimized with persistent storage
+  - Microsoft 365 or Active Directory support
+  - Password export to secure timestamped CSV
+
+### �🖥️ On-Premise Infrastructure Assessments
 
 Active Directory and Windows Server assessment tools:
 - **[Get-ComprehensiveADReport](Get-ComprehensiveADReport)** - Complete Active Directory assessment for AD to AD migrations
@@ -76,6 +87,23 @@ Microsoft Intune device enrollment and management:
 - **Graph Commands** - Microsoft Graph API helpers and utilities _(documentation pending)_
 
 ## 🎯 Featured Scripts
+
+### New-Office365Accounts.ps1
+Bulk user account creation for Microsoft 365 with automatic password generation, OneDrive provisioning, and Cloud Shell support. Accepts CSV files, arrays, or individual parameters.
+
+**Quick Start:**
+```powershell
+# From array
+$users = @(
+    @{FirstName='John'; LastName='Doe'; EmailAddress='john.doe@contoso.com'; UsageLocation='US'}
+)
+.\New-Office365Accounts.ps1 -UserArray $users -InitializeOneDrive
+
+# From Cloud Shell (auto-detects environment)
+.\New-Office365Accounts.ps1 -CsvPath "users.csv"
+```
+
+[View Documentation →](Office365/New-Office365Accounts)
 
 ### Get-QuickO365Report.ps1
 Complete Office 365 tenant assessment collecting mailboxes, licenses, OneDrive, SharePoint, Groups, Teams, and permissions. Generates professional Excel workbook with formatted tables.

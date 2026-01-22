@@ -24,6 +24,9 @@
 - [Get-MailboxRules](Get-MailboxRules)
 - [Get-MigrationWizLicensing](Get-MigrationWizLicensing)
 
+### Office 365 Management
+- [New-Office365Accounts](Office365/New-Office365Accounts)
+
 ### On-Premise Infrastructure
 - [Get-ComprehensiveADReport](Get-ComprehensiveADReport)
 - [Check-ADMTPrerequisites](Check-ADMTPrerequisites)
