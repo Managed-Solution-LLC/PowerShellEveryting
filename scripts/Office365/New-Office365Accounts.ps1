@@ -223,38 +223,6 @@ param(
     [switch]$InitializeOneDrive
 )
 
-#region Initialization
-
-$ErrorActionPreference = 'Stop'
-$StartTime = Get-Date
-$Separator = "=" * 80
-$SubSeparator = "-" * 60
-
-# Statistics tracking
-$SuccessCount = 0
-$ErrorCount = 0
-$WarningCount = 0
-$CreatedAccounts = @()
-
-Write-Host "`n$Separator" -ForegroundColor Cyan
-Write-Host "ACCOUNT CREATION UTILITY" -ForegroundColor Cyan
-Write-Host "Started: $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')" -ForegroundColor Cyan
-Write-Host $Separator -ForegroundColor Cyan
-# Detect environment and set default output directory if not specified
-if ([string]::IsNullOrWhiteSpace($OutputDirectory)) {
-    $OutputDirectory = Get-DefaultOutputDirectory
-}
-
-# Display environment info
-if (Test-CloudShell) {
-    Write-Host "Environment: Azure Cloud Shell" -ForegroundColor Cyan
-    Write-Host "PowerShell Version: $($PSVersionTable.PSVersion)" -ForegroundColor Gray
-}
-else {
-    Write-Host "Environment: $([System.Environment]::OSVersion.Platform)" -ForegroundColor Cyan
-}
-#endregion
-
 #region Functions
 
 function Test-CloudShell {
@@ -628,6 +596,40 @@ function Export-AccountResults {
     catch {
         Write-StatusMessage "Failed to export results: $($_.Exception.Message)" -Type Error
     }
+}
+
+#endregion
+
+#region Initialization
+
+$ErrorActionPreference = 'Stop'
+$StartTime = Get-Date
+$Separator = "=" * 80
+$SubSeparator = "-" * 60
+
+# Statistics tracking
+$SuccessCount = 0
+$ErrorCount = 0
+$WarningCount = 0
+$CreatedAccounts = @()
+
+Write-Host "`n$Separator" -ForegroundColor Cyan
+Write-Host "ACCOUNT CREATION UTILITY" -ForegroundColor Cyan
+Write-Host "Started: $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')" -ForegroundColor Cyan
+Write-Host $Separator -ForegroundColor Cyan
+
+# Detect environment and set default output directory if not specified
+if ([string]::IsNullOrWhiteSpace($OutputDirectory)) {
+    $OutputDirectory = Get-DefaultOutputDirectory
+}
+
+# Display environment info
+if (Test-CloudShell) {
+    Write-Host "Environment: Azure Cloud Shell" -ForegroundColor Cyan
+    Write-Host "PowerShell Version: $($PSVersionTable.PSVersion)" -ForegroundColor Gray
+}
+else {
+    Write-Host "Environment: $([System.Environment]::OSVersion.Platform)" -ForegroundColor Cyan
 }
 
 #endregion
